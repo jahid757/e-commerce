@@ -43,3 +43,18 @@ table tbody tr:hover .row-actions {
 table tbody tr td .trash {
   color: #b32d2e;
 }
+.modal-footer{
+  padding: 0px;
+  color: #424548;
+}
+.modal-header{
+  padding: 5px 8px;
+  background-color: #f6f7f7;
+  color:#35383c;
+}
+.modal-body{
+  color: #424548;
+}
+.modal-body p{
+  font-size: 15px;
+}

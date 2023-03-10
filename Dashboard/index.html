@@ -1,77 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Dashboard</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <!-- header Menu -->
-    <header>
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="#"><img src="./images/logo.png" alt=""></a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          New
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <li><a class="dropdown-item" href="#">Post</a></li>
-                          <li><a class="dropdown-item" href="#">Media</a></li>
-                          <li><a class="dropdown-item" href="#">Slider</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-        </div>
-    </header>
-
-    <!-- main -->
-
-    <main>
-        <section class="card-wrap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-header">
-                              Featured
-                            </div>
-                            <div class="card-body">
-                              <h5 class="card-title">Special title treatment</h5>
-                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                          </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-
-    <!-- left side menu -->
-
-    <section class="left-side">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/4b5d72e539.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/prototype.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+  </head>
+  <body>
+    <div class="leftSideBar hide_scrollbar">
+      <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Home</a></li>
+          <li>
+            <a href="./index.html"><i class="fa fa-house"></i> Dashboard</a>
+          </li>
+          <li>
+            <a class="active" href="#"><i class="fa fa-pen"></i> Post</a>
+            <ul>
+              <li><a class="active" href="./posts.html">All Posts</a></li>
+              <li><a href="#">Add New</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="./profile.html"><i class="fa fa-user"></i> Profile</a>
+          </li>
         </ul>
-    </section>
+      </nav>
+    </div>
+    <header class="top_bar p-2">
+      <div class="d-flex align-items-center justify-content-between">
+        <div>
+          <a class="d-flex align-items-center" href="#">
+            <img src="./images/logo.png" alt="logo" />
+            <span>WB Software</span>
+          </a>
+        </div>
+        <div class="profile">
+          <div id="profile_pic" onclick="toggleClass('profile_content')" class="profile_pic">
+            <img src="https://i.ibb.co/N61Bhkv/avater.jpg" alt="" />
+          </div>
+          <div id="profile_content" class="profile_content">
+            <div class="d-flex align-items-center w-245">
+              <img src="https://i.ibb.co/N61Bhkv/avater.jpg" alt="">
+              <ul>
+                <li><a href="#">Jahid</a></li>
+                <li><span class="slogan">Web Developer</span></li>
+                <li><a href="#">Edit Profile</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+      <main>
+        <section>
+          <div class="container-fluid mt-3">
+            <div class="top_post d-flex align-items-center justify-content-between mb-3">
+              <h3>Dashboard</h3>
+            </div>
+            <div class="card_wrap">
+              <div class="row">
 
+                <div class="col-md-4 mb-3">
 
+                  <div class="card">
+                    <div onclick="toggleCard('card_body_1')" class="card-header">
+                      <div class="d-flex align-items-center justify-content-between">
+                        <h5>At a Glance</h5>
+                        <button><span class="dropdown-toggle"></span></button>
+                      </div>
+                    </div>
+                    <div id="card_body_1" class="card-body">
+                      <div class="post_details">
+                        <ul>
+                          <li><i class="fa fa-pen"></i> <a href="./posts.html">17 Posts</a></li>
+                          <li><i class="fa fa-file-invoice"></i> 4 Pages</li>
+                        </ul>
+                        <p>Lorem text is added for test purpose</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="col-md-4 mb-3">
+
+                  <div class="card">
+                    <div onclick="toggleCard('card_body_2')" class="card-header">
+                      <div class="d-flex align-items-center justify-content-between">
+                        <h5>Quick Draft</h5>
+                        <button><span class="dropdown-toggle"></span></button>
+                      </div>
+                    </div>
+                    <div id="card_body_2">
+                      <div class="card-body">
+                        <form action="">
+                          <div class="single_input">
+                            <label for="title">Title</label>
+                            <input type="text" id="title">
+                          </div>
+  
+                          <div class="single_input">
+                            <label for="description">Content</label>
+                            <textarea name="description" id="description" cols="30" rows="10" placeholder="What’s on your mind?"></textarea>
+                          </div>
+                          <button class="save_draft_btn">Save Draft</button>
+                        </form>
+                      </div>
+                      <div class="card-footer">
+                        <p>Your Recent Drafts</p>
+                        <p><a href="#">(no title)</a> March 9, 2023</p>
+                        <p>Lorem ipsum dolor, amet consectetur adipisicing. Repellat reprehenderit ipsum debitis eaque? Fuga, adipisci...</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="col-md-4 mb-3">
+
+                  <div class="card">
+                    <div onclick="toggleCard('card_body_3')" class="card-header">
+                      <div class="d-flex align-items-center justify-content-between">
+                        <h5>At a Glance</h5>
+                        <button><span class="dropdown-toggle"></span></button>
+                      </div>
+                    </div>
+                    <div id="card_body_3" class="card-body">
+                      <div class="post_details">
+                        <ul>
+                          <li><i class="fa fa-pen"></i> <a href="./posts.html">17 Posts</a></li>
+                          <li><i class="fa fa-file-invoice"></i> 4 Pages</li>
+                        </ul>
+                        <p>Lorem text is added for test purpose</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
     <script src="./js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

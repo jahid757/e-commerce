@@ -9,7 +9,10 @@
     .leftSideBar{
         display: none;
     }
-    .content{
+    .leftSideBar.open{
+        display: block;
+    }
+    .content,.content.active{
         margin-left: 0;
     }
     .top_second,.right_side  {
@@ -20,5 +23,11 @@
     }
     .basic_filter p{
         display:inline-block;
+    }
+    .left_nav .collapse{
+        display: none;
+    }
+    .toggle_left_menu{
+        display: block;
     }
 }
