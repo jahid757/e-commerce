@@ -1,0 +1,45 @@
+.right_side input {
+  box-shadow: 0 0 0 transparent;
+  border-radius: 4px;
+  border: 1px solid #8c8f94;
+  background-color: #fff;
+  color: #2c3338;
+  outline: none;
+}
+.right_side button {
+  padding: 5.5px 8px;
+  margin-left: 3px;
+}
+.basic_filter {
+  font-size: 13px;
+}
+.basic_filter p {
+  margin-right: 3px;
+}
+.top_second button {
+  top: 3px;
+}
+.row_title {
+  font-size: 14px !important;
+  /* font-weight: 600; */
+}
+table {
+    overflow-x: auto;
+    margin-right: 27px;
+}
+thead tr th {
+  font-size: 14px;
+  font-weight: 400;
+}
+table tbody td {
+  font-size: 13px;
+}
+.row-actions {
+  visibility: hidden;
+}
+table tbody tr:hover .row-actions {
+  visibility: visible;
+}
+table tbody tr td .trash {
+  color: #b32d2e;
+}

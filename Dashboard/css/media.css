@@ -1,0 +1,15 @@
+@media (max-width:1200px) {
+    table{
+        width: 1000px!important;
+        margin-right: 0;
+    }
+}
+
+@media (max-width:768px) {
+    .leftSideBar{
+        display: none;
+    }
+    .content{
+        margin-left: 0;
+    }
+}
