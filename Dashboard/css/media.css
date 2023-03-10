@@ -12,4 +12,13 @@
     .content{
         margin-left: 0;
     }
+    .top_second,.right_side  {
+        display: none !important;
+    }
+    .basic_filter{
+        display: block !important;
+    }
+    .basic_filter p{
+        display:inline-block;
+    }
 }
