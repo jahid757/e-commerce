@@ -12,7 +12,7 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 13px;
   line-height: 1.4em;
-  min-width: 600px;
+  /* min-width: 600px; */
 }
 
 .leftSideBar {
