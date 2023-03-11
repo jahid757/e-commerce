@@ -89,7 +89,7 @@ table tbody tr td .trash {
 /* Table 2 */
 
 .table_2 .basic_filter p a{
-  color: #fff;
+  color: #009EF7;
   display: block;
   padding: 0;
   font-weight: 500;
@@ -97,7 +97,12 @@ table tbody tr td .trash {
 }
 .table_2 .basic_filter p {
   margin-right: 3px;
-  background: #0d6efd;
+  padding: 7px 13px;
+  border-radius: 5px;
+}
+.table_2 .basic_filter p.active {
+  margin-right: 3px;
+  background: #E1E3EA;
   padding: 7px 13px;
   border-radius: 5px;
 }
@@ -109,4 +114,7 @@ table tbody tr td .trash {
 .table_2 .nav_indicator{
   font-weight: 400;
   font-size: 15px;
+}
+.table-bordered>:not(caption)>*{
+  border-width: 2px;
 }
