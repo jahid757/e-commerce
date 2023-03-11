@@ -44,21 +44,7 @@ table tbody tr:hover .row-actions {
 table tbody tr td .trash {
   color: #b32d2e;
 }
-.modal-footer{
-  padding: 0px;
-  color: #424548;
-}
-.modal-header{
-  padding: 5px 8px;
-  background-color: #f6f7f7;
-  color:#35383c;
-}
-.modal-body{
-  color: #424548;
-}
-.modal-body p{
-  font-size: 15px;
-}
+
 
 .table{
   --bs-table-striped-bg: #F6F7F7;
@@ -126,6 +112,7 @@ table tbody tr td .trash {
   padding:11px 13px;
   font-weight: 500;
   font-size: 14px;
+  display: block;
 }
 .table_2 .nav_indicator{
   font-weight: 400;
