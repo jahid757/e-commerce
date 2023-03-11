@@ -58,9 +58,12 @@ table tbody tr td .trash {
 .modal-body p{
   font-size: 15px;
 }
-.table-striped tbody tr{
+/* .table-striped tbody tr{
   background-color: #F6F7F7;
 }
 .table-striped tbody tr:hover{
   background-color: #F6F7F7;
+} */
+.table{
+  --bs-table-striped-bg: #F6F7F7;
 }
