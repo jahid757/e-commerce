@@ -59,14 +59,11 @@ table tbody tr td .trash {
 .modal-body p{
   font-size: 15px;
 }
-/* .table-striped tbody tr{
-  background-color: #F6F7F7;
-}
-.table-striped tbody tr:hover{
-  background-color: #F6F7F7;
-} */
+
 .table{
   --bs-table-striped-bg: #F6F7F7;
+  --bs-table-bg: #fff;
+  --bs-table-border-color: #c3c4c7;
 }
 .table span{
   padding: 0.2rem;
@@ -76,6 +73,15 @@ table tbody tr td .trash {
   font-size: 16px;
   font-weight: bold;
 }
+.table thead, .table tfoot{
+  background-color: #fff;
+}
+.table-bordered>:not(caption)>*>*{
+  border-width: 1px;
+}
+/* .table tfoot td{
+  border: none;
+} */
 
 
 
@@ -88,8 +94,15 @@ table tbody tr td .trash {
 
 /* Table 2 */
 
+.table_2 .basic_filter{
+  background-color: #fff;
+  padding: 5px;
+  /* border-radius: 5px; */
+  border: 1px solid #c3c4c7;
+}
+
 .table_2 .basic_filter p a{
-  color: #009EF7;
+  color: #B0A2AD;
   display: block;
   padding: 0;
   font-weight: 500;
@@ -106,6 +119,9 @@ table tbody tr td .trash {
   padding: 7px 13px;
   border-radius: 5px;
 }
+.table_2 .basic_filter p.active a{
+  color: #009EF7;
+}
 .table_2 .add_post_btn a{
   padding:11px 13px;
   font-weight: 500;
@@ -114,7 +130,45 @@ table tbody tr td .trash {
 .table_2 .nav_indicator{
   font-weight: 400;
   font-size: 15px;
+  padding-top: 4px;
+  margin-left: 7px;
 }
-.table-bordered>:not(caption)>*{
+.table_2 .divider{
+  margin-left: 7px;
+  color:#ababab;
+  font-weight: 100;
+}
+/* .table-bordered>:not(caption)>*{
   border-width: 2px;
+} */
+
+.pagination button{
+  border: none;
+  outline: none;
+  background-color: #eee;
+}
+.pagination .page-item.disabled button{
+  color: #a7aaad!important;
+  border-color: #dcdcde!important;
+  background: #f6f7f7!important;
+  box-shadow: none!important;
+  cursor: default;
+  transform: none!important;
+}
+.pagination .page-item button{
+    display: inline-block;
+    vertical-align: baseline;
+    min-width: 30px;
+    min-height: 30px;
+    margin: 0 1px;
+    padding: 0 4px;
+    font-size: 16px;
+    line-height: 1.625;
+    text-align: center;
+    color: #2271b1;
+    border:1px solid  #2271b1;
+    background: #f6f7f7;
+}
+.pagination .page-item{
+  margin: 0 5px;
 }
