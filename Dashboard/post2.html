@@ -19,21 +19,21 @@
 }
     </style>
 </head>
-<body class="web_version_2 ">
-    <div id="left_side" class="leftSideBar hide_scrollbar">
-        <nav>
-            <ul class="left_nav">
-                <li><a href="./index.html"><i class="fa fa-house"></i> <span>Dashboard</span></a></li>
-                <li><a onclick="toggleCard('post_sub_menu')" class="active dropdown-toggle post_toggle" href="javascript:void(0)"><i class="fa fa-pen"> </i> <span>Post</span></a>
-                  <ul id="post_sub_menu" class="toggle_sub_menu">
-                    <li><a class="active" href="./post1.html"><span>All Posts</span></a></li>
-                    <li><a href="#"><span>Add New</span></a></li>
-                  </ul></li>
-                <li><a href="./profile.html"><i class="fa fa-user"></i> <span>Profile</span></a></li>
-                <li class="collapse" onclick="toggleClass('left_side','content')"><a href="javascript:void(0)"><i class="fa fa-play"></i> <span>Collapse</span></a></li>
-            </ul>
-        </nav>
-    </div>
+<body class="web_version_2">
+  <div id="left_side" class="leftSideBar hide_scrollbar">
+    <nav>
+        <ul class="left_nav">
+            <li><a href="./index.html"><i class="fa fa-house"></i> <span>Dashboard</span></a></li>
+            <li><a onclick="toggleCard('post_sub_menu')" class="active dropdown-toggle post_toggle" href="javascript:void(0)"><i class="fa fa-pen"> </i> <span>Post</span></a>
+              <ul id="post_sub_menu" class="toggle_sub_menu">
+                <li><a class="active" href="./post1.html"><span>All Posts</span></a></li>
+                <li><a href="#"><span>Add New</span></a></li>
+              </ul></li>
+            <li><a href="./profile.html"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+            <li class="collapse" onclick="toggleClass('left_side','content','footer')"><a href="javascript:void(0)"><i class="fa fa-play"></i> <span>Collapse</span></a></li>
+        </ul>
+    </nav>
+</div>
     <header class="top_bar px-2">
       <div class="d-flex align-items-center justify-content-between">
         <div class="d-flex align-items-center">
@@ -81,33 +81,30 @@
             <section>
                 <div class="container-fluid mt-3">
     
-                    <div class="top_post d-flex align-items-center justify-content-between flex-wrap include_add_post">
-                       <div class="left_side d-flex align-items-center mb-2">
+                    <div class="top_post d-flex align-items-center justify-content-between">
+                       <div class="left_side d-flex align-items-center">
                         
                         <div class="d-flex align-items-center"><h3>Posts <span class="divider"> |</span></h3><span class="nav_indicator"><a href="./index.html">Home</a> > Table</span></div>
-                         
+                        
                        </div>
-                       <div class="add_post_btn second mb-2">
-                        <a href="#" class="table_button">Add New</a>
-                      </div>
                        <div class="right_side d-flex align-items-center">
                         <input type="text" name="search" id="search">
                         <button class="table_button">Search</button>
                        </div>
                     </div>
                     <div class="basic_filter d-flex align-items-center justify-content-between my-3">
-                        <div class="d-flex align-items-center flex-wrap">
+                        <div class="d-flex align-items-center">
                             <p><a href="#">All</a></p>
                             <p><a href="javascript:void(0)" >Mine</a></p>
                             <p><a href="#">Published</a></p>
                             <p class="active"><a href="#">Scheduled</a></p>
                             <p><a href="#">Draft</a></p>
                         </div>
-                        <div class="add_post_btn first">
+                        <div class="add_post_btn">
                             <a href="#" class="table_button">Add New</a>
                         </div>
                     </div>
-                    <div class="top_second mb-2">
+                    <div class="top_second d-flex align-items-center justify-content-between mb-2">
                         <div>
                             <select name="option" id="option">
                                 <option value="bulk">Bulk Options</option>
@@ -126,6 +123,7 @@
                             </select>
                             <button class="table_button">Filter</button>
                         </div>
+                        <p>9 items</p>
                     </div>
                 </div>
             </section>
@@ -149,6 +147,325 @@
                             </thead>
                             <tbody>
         
+                              <tr>
+                                <th scope="row"><input type="checkbox" name="select" id="select"></th>
+                                <td>
+                                    <div class="row_title">
+                                        <strong><a href="#">(no title) — Scheduled</a></strong>
+                                    </div>
+                                    <div class="row-actions">
+                                        <span><a href="#">Edit </a> | </span>
+                                        <span><a href="#">Quick Edit </a> | </span>
+                                        <span><a href="#"><span class="trash">Trash</span> | </a></span>
+                                        <span><a href="#">Preview</a></span>
+                                    </div>
+                                </td>
+                                <td><a href="#">XYZ</a></td>
+                                <td><a href="#">Demo</a></td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td>
+                                    <span>Scheduled</span><br>
+                                    <span>2023/05/09 at 1:00 pm</span>
+                                </td>
+                                <td>
+                                    <i class="fa fa-eye"></i> 0
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row"><input type="checkbox" name="select" id="select"></th>
+                                <td>
+                                    <div class="row_title">
+                                        <strong><a href="#">(no title) — Scheduled</a></strong>
+                                    </div>
+                                    <div class="row-actions">
+                                        <span><a href="#">Edit </a> | </span>
+                                        <span><a href="#">Quick Edit </a> | </span>
+                                        <span><a href="#"><span class="trash">Trash</span> | </a></span>
+                                        <span><a href="#">Preview</a></span>
+                                    </div>
+                                </td>
+                                <td><a href="#">XYZ</a></td>
+                                <td><a href="#">Demo</a></td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td>
+                                    <span>Scheduled</span><br>
+                                    <span>2023/05/09 at 1:00 pm</span>
+                                </td>
+                                <td>
+                                    <i class="fa fa-eye"></i> 0
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row"><input type="checkbox" name="select" id="select"></th>
+                                <td>
+                                    <div class="row_title">
+                                        <strong><a href="#">(no title) — Scheduled</a></strong>
+                                    </div>
+                                    <div class="row-actions">
+                                        <span><a href="#">Edit </a> | </span>
+                                        <span><a href="#">Quick Edit </a> | </span>
+                                        <span><a href="#"><span class="trash">Trash</span> | </a></span>
+                                        <span><a href="#">Preview</a></span>
+                                    </div>
+                                </td>
+                                <td><a href="#">XYZ</a></td>
+                                <td><a href="#">Demo</a></td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td>
+                                    <span>Scheduled</span><br>
+                                    <span>2023/05/09 at 1:00 pm</span>
+                                </td>
+                                <td>
+                                    <i class="fa fa-eye"></i> 0
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row"><input type="checkbox" name="select" id="select"></th>
+                                <td>
+                                    <div class="row_title">
+                                        <strong><a href="#">(no title) — Scheduled</a></strong>
+                                    </div>
+                                    <div class="row-actions">
+                                        <span><a href="#">Edit </a> | </span>
+                                        <span><a href="#">Quick Edit </a> | </span>
+                                        <span><a href="#"><span class="trash">Trash</span> | </a></span>
+                                        <span><a href="#">Preview</a></span>
+                                    </div>
+                                </td>
+                                <td><a href="#">XYZ</a></td>
+                                <td><a href="#">Demo</a></td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td>
+                                    <span>Scheduled</span><br>
+                                    <span>2023/05/09 at 1:00 pm</span>
+                                </td>
+                                <td>
+                                    <i class="fa fa-eye"></i> 0
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row"><input type="checkbox" name="select" id="select"></th>
+                                <td>
+                                    <div class="row_title">
+                                        <strong><a href="#">(no title) — Scheduled</a></strong>
+                                    </div>
+                                    <div class="row-actions">
+                                        <span><a href="#">Edit </a> | </span>
+                                        <span><a href="#">Quick Edit </a> | </span>
+                                        <span><a href="#"><span class="trash">Trash</span> | </a></span>
+                                        <span><a href="#">Preview</a></span>
+                                    </div>
+                                </td>
+                                <td><a href="#">XYZ</a></td>
+                                <td><a href="#">Demo</a></td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td>
+                                    <span>Scheduled</span><br>
+                                    <span>2023/05/09 at 1:00 pm</span>
+                                </td>
+                                <td>
+                                    <i class="fa fa-eye"></i> 0
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row"><input type="checkbox" name="select" id="select"></th>
+                                <td>
+                                    <div class="row_title">
+                                        <strong><a href="#">(no title) — Scheduled</a></strong>
+                                    </div>
+                                    <div class="row-actions">
+                                        <span><a href="#">Edit </a> | </span>
+                                        <span><a href="#">Quick Edit </a> | </span>
+                                        <span><a href="#"><span class="trash">Trash</span> | </a></span>
+                                        <span><a href="#">Preview</a></span>
+                                    </div>
+                                </td>
+                                <td><a href="#">XYZ</a></td>
+                                <td><a href="#">Demo</a></td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td>
+                                    <span>Scheduled</span><br>
+                                    <span>2023/05/09 at 1:00 pm</span>
+                                </td>
+                                <td>
+                                    <i class="fa fa-eye"></i> 0
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row"><input type="checkbox" name="select" id="select"></th>
+                                <td>
+                                    <div class="row_title">
+                                        <strong><a href="#">(no title) — Scheduled</a></strong>
+                                    </div>
+                                    <div class="row-actions">
+                                        <span><a href="#">Edit </a> | </span>
+                                        <span><a href="#">Quick Edit </a> | </span>
+                                        <span><a href="#"><span class="trash">Trash</span> | </a></span>
+                                        <span><a href="#">Preview</a></span>
+                                    </div>
+                                </td>
+                                <td><a href="#">XYZ</a></td>
+                                <td><a href="#">Demo</a></td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td>
+                                    <span>Scheduled</span><br>
+                                    <span>2023/05/09 at 1:00 pm</span>
+                                </td>
+                                <td>
+                                    <i class="fa fa-eye"></i> 0
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row"><input type="checkbox" name="select" id="select"></th>
+                                <td>
+                                    <div class="row_title">
+                                        <strong><a href="#">(no title) — Scheduled</a></strong>
+                                    </div>
+                                    <div class="row-actions">
+                                        <span><a href="#">Edit </a> | </span>
+                                        <span><a href="#">Quick Edit </a> | </span>
+                                        <span><a href="#"><span class="trash">Trash</span> | </a></span>
+                                        <span><a href="#">Preview</a></span>
+                                    </div>
+                                </td>
+                                <td><a href="#">XYZ</a></td>
+                                <td><a href="#">Demo</a></td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td>
+                                    <span>Scheduled</span><br>
+                                    <span>2023/05/09 at 1:00 pm</span>
+                                </td>
+                                <td>
+                                    <i class="fa fa-eye"></i> 0
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row"><input type="checkbox" name="select" id="select"></th>
+                                <td>
+                                    <div class="row_title">
+                                        <strong><a href="#">(no title) — Scheduled</a></strong>
+                                    </div>
+                                    <div class="row-actions">
+                                        <span><a href="#">Edit </a> | </span>
+                                        <span><a href="#">Quick Edit </a> | </span>
+                                        <span><a href="#"><span class="trash">Trash</span> | </a></span>
+                                        <span><a href="#">Preview</a></span>
+                                    </div>
+                                </td>
+                                <td><a href="#">XYZ</a></td>
+                                <td><a href="#">Demo</a></td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td>
+                                    <span>Scheduled</span><br>
+                                    <span>2023/05/09 at 1:00 pm</span>
+                                </td>
+                                <td>
+                                    <i class="fa fa-eye"></i> 0
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row"><input type="checkbox" name="select" id="select"></th>
+                                <td>
+                                    <div class="row_title">
+                                        <strong><a href="#">(no title) — Scheduled</a></strong>
+                                    </div>
+                                    <div class="row-actions">
+                                        <span><a href="#">Edit </a> | </span>
+                                        <span><a href="#">Quick Edit </a> | </span>
+                                        <span><a href="#"><span class="trash">Trash</span> | </a></span>
+                                        <span><a href="#">Preview</a></span>
+                                    </div>
+                                </td>
+                                <td><a href="#">XYZ</a></td>
+                                <td><a href="#">Demo</a></td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td>
+                                    <span>Scheduled</span><br>
+                                    <span>2023/05/09 at 1:00 pm</span>
+                                </td>
+                                <td>
+                                    <i class="fa fa-eye"></i> 0
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row"><input type="checkbox" name="select" id="select"></th>
+                                <td>
+                                    <div class="row_title">
+                                        <strong><a href="#">(no title) — Scheduled</a></strong>
+                                    </div>
+                                    <div class="row-actions">
+                                        <span><a href="#">Edit </a> | </span>
+                                        <span><a href="#">Quick Edit </a> | </span>
+                                        <span><a href="#"><span class="trash">Trash</span> | </a></span>
+                                        <span><a href="#">Preview</a></span>
+                                    </div>
+                                </td>
+                                <td><a href="#">XYZ</a></td>
+                                <td><a href="#">Demo</a></td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td> <a href="javascript:void(0)" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                  View
+                                </a> </td>
+                                <td>
+                                    <span>Scheduled</span><br>
+                                    <span>2023/05/09 at 1:00 pm</span>
+                                </td>
+                                <td>
+                                    <i class="fa fa-eye"></i> 0
+                                </td>
+                              </tr>
                               <tr>
                                 <th scope="row"><input type="checkbox" name="select" id="select"></th>
                                 <td>
@@ -298,7 +615,7 @@
         
         
         <div class="modal fade" id="myModal">
-          <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-dialog">
             <div class="modal-content">
         
               <!-- Modal Header -->
@@ -313,9 +630,9 @@
               </div>
         
               <!-- Modal footer -->
-              <div class="modal-footer justify-content-center">
+              <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Understood</button>
+                <!-- <button type="button" class="btn btn-primary">Understood</button> -->
               </div>
         
             </div>
@@ -329,9 +646,13 @@
     <!-- modal -->
     <!-- Button trigger modal -->
 
-
-    <div class="footer_text">
-      <p><em>Thank you for creating with <a href="#">Website</a></em></p>
+    <div id="footer" class="footer_text">
+      <div class="container-fluid">
+        <div class="d-md-flex align-items-center justify-content-between">
+          <p><em>Thank you for creating with <a href="#">Website</a></em></p>
+          <p><em>Version 1.1</a></em></p>
+        </div>
+      </div>
     </div>
 
     <script src="./js/script.js"></script>

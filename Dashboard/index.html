@@ -21,7 +21,7 @@
       <nav>
           <ul class="left_nav">
               <li><a href="./index.html"><i class="fa fa-house"></i> <span>Dashboard</span></a></li>
-              <li><a onclick="toggleCard('post_sub_menu')" class="active dropdown-toggle post_toggle" href="javascript:void(0)"><i class="fa fa-pen"> </i> <span>Post</span></a>
+              <li><a onclick="toggleCard('post_sub_menu')" class="dropdown-toggle post_toggle" href="javascript:void(0)"><i class="fa fa-pen"> </i> <span>Post</span></a>
                 <ul id="post_sub_menu" class="toggle_sub_menu">
                   <li><a class="active" href="./post1.html"><span>All Posts</span></a></li>
                   <li><a href="#"><span>Add New</span></a></li>
@@ -186,7 +186,12 @@
       </main>
     </div>
     <div class="footer_text">
-      <p><em>Thank you for creating with <a href="#">Website</a></em></p>
+      <div class="container-fluid">
+        <div class="d-md-flex align-items-center justify-content-between">
+          <p><em>Thank you for creating with <a href="#">Website</a></em></p>
+          <p><em>Version 1.1</a></em></p>
+        </div>
+      </div>
     </div>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>

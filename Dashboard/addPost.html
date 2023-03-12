@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dashboard</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/4b5d72e539.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/prototype.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+  </head>
+  <body class="web_version_2">
+    <div id="left_side" class="leftSideBar hide_scrollbar">
+      <nav>
+          <ul class="left_nav">
+              <li><a href="./index.html"><i class="fa fa-house"></i> <span>Dashboard</span></a></li>
+              <li><a onclick="toggleCard('post_sub_menu')" class="dropdown-toggle post_toggle" href="javascript:void(0)"><i class="fa fa-pen"> </i> <span>Post</span></a>
+                <ul id="post_sub_menu" class="toggle_sub_menu">
+                  <li><a class="active" href="./post1.html"><span>All Posts</span></a></li>
+                  <li><a href="#"><span>Add New</span></a></li>
+                </ul></li>
+              <li><a href="./profile.html"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+              <li class="collapse" onclick="toggleClass('left_side','content')"><a href="javascript:void(0)"><i class="fa fa-play"></i> <span>Collapse</span></a></li>
+          </ul>
+      </nav>
+  </div>
+    <header class="top_bar px-2">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+          <a class="d-flex align-items-center" href="#">
+            <img class="img_sm" src="./images/logo.png" alt="logo" />
+            <span>WB Software</span>
+          </a>
+          <div class="dropdown ms-2">
+            <a class="dropdown-toggle text-white" href="javascript:void(0)" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              New
+            </a>
+          
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Post</a></li>
+              <li><a class="dropdown-item" href="#">Media</a></li>
+              <li><a class="dropdown-item" href="#">Page</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="profile">
+          <div id="profile_pic" onclick="toggleClass('profile_content')" class="profile_pic">
+            <img class="img_sm" src="https://i.ibb.co/N61Bhkv/avater.jpg" alt="" />
+          </div>
+          <div id="profile_content" class="profile_content">
+            <div class="w-140">
+              <div class="d-flex align-items-center border-bottom border-secondary">
+                <img src="https://i.ibb.co/N61Bhkv/avater.jpg" alt="">
+              <ul>
+                <li><a href="#">Jahid</a></li>
+                <li><span class="slogan">Web Developer</span></li>
+              </ul>
+              </div>
+              <ul class="pofile_link">
+                <li><a href="#">Edit Profile</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+      <main>
+        
+      </main>
+    </div>
+    <div class="footer_text">
+      <div class="container-fluid">
+        <div class="d-md-flex align-items-center justify-content-between">
+          <p><em>Thank you for creating with <a href="#">Website</a></em></p>
+          <p><em>Version 1.1</a></em></p>
+        </div>
+      </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

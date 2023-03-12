@@ -1,8 +1,12 @@
-function toggleClass(id,id2) {
+function toggleClass(id,id2,id3) {
   const element = document.getElementById(id);
   element.classList.toggle("active");
   if(id2){
     const elementContent = document.getElementById(id2);
+    elementContent.classList.toggle('active')
+  }
+  if(id3){
+    const elementContent = document.getElementById(id3);
     elementContent.classList.toggle('active')
   }
 }

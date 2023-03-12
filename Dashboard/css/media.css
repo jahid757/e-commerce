@@ -15,6 +15,9 @@
     .content,.content.active{
         margin-left: 0;
     }
+    .footer_text, .footer_text.active{
+        margin-left: 0;
+    }
     /* .top_second,.right_side  {
         display: none !important;
     } */
