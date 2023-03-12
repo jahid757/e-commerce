@@ -19,12 +19,12 @@
 }
     </style>
 </head>
-<body class="table_2 ">
+<body class="web_version_2 ">
     <div id="left_side" class="leftSideBar hide_scrollbar">
         <nav>
             <ul class="left_nav">
                 <li><a href="./index.html"><i class="fa fa-house"></i> <span>Dashboard</span></a></li>
-                <li><a onclick="toggleCard('post_sub_menu')" class="active" href="javascript:void(0)"><i class="fa fa-pen"></i> <span>Post</span></a>
+                <li><a onclick="toggleCard('post_sub_menu')" class="active dropdown-toggle post_toggle" href="javascript:void(0)"><i class="fa fa-pen"> </i> <span>Post</span></a>
                   <ul id="post_sub_menu" class="toggle_sub_menu">
                     <li><a class="active" href="./post1.html"><span>All Posts</span></a></li>
                     <li><a href="#"><span>Add New</span></a></li>
@@ -34,24 +34,31 @@
             </ul>
         </nav>
     </div>
-    <header class="top_bar p-2">
+    <header class="top_bar px-2">
       <div class="d-flex align-items-center justify-content-between">
-        <button onclick="controlLeftMenu()" class="toggle_left_menu">
-              <i class="fa-solid fa-bars"></i>
-            </button>
-        <div>
-          
-          <a class="d-flex align-items-center " href="#">
-            <img src="./images/logo.png" alt="logo" />
+        <div class="d-flex align-items-center">
+          <a class="d-flex align-items-center" href="#">
+            <img class="img_sm" src="./images/logo.png" alt="logo" />
             <span>WB Software</span>
           </a>
+          <div class="dropdown ms-2">
+            <a class="dropdown-toggle text-white" href="javascript:void(0)" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              New
+            </a>
+          
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Post</a></li>
+              <li><a class="dropdown-item" href="#">Media</a></li>
+              <li><a class="dropdown-item" href="#">Page</a></li>
+            </ul>
+          </div>
         </div>
         <div class="profile">
           <div id="profile_pic" onclick="toggleClass('profile_content')" class="profile_pic">
-            <img src="https://i.ibb.co/N61Bhkv/avater.jpg" alt="" />
+            <img class="img_sm" src="https://i.ibb.co/N61Bhkv/avater.jpg" alt="" />
           </div>
-          <div id="profile_content" class="profile_content px-2">
-            <div class="w-150">
+          <div id="profile_content" class="profile_content">
+            <div class="w-140">
               <div class="d-flex align-items-center border-bottom border-secondary">
                 <img src="https://i.ibb.co/N61Bhkv/avater.jpg" alt="">
               <ul>
@@ -59,10 +66,7 @@
                 <li><span class="slogan">Web Developer</span></li>
               </ul>
               </div>
-              <ul style="
-              padding-left: 6px;
-              padding-bottom: 6px;
-          ">
+              <ul class="pofile_link">
                 <li><a href="#">Edit Profile</a></li>
                 <li><a href="#">Logout</a></li>
               </ul>
@@ -289,9 +293,7 @@
                     </div>
                 </section>
             </div>
-            <div class="container-fluid">
-              <p><em>Thank you for creating with <a href="#">Website</a></em></p>
-            </div>
+            
         </main>
         
         
@@ -328,7 +330,9 @@
     <!-- Button trigger modal -->
 
 
-    
+    <div class="footer_text">
+      <p><em>Thank you for creating with <a href="#">Website</a></em></p>
+    </div>
 
     <script src="./js/script.js"></script>
 </body>

@@ -80,51 +80,41 @@ table tbody tr td .trash {
 
 /* Table 2 */
 
-.table_2 .basic_filter{
+.web_version_2 .basic_filter{
   background-color: #fff;
   padding: 5px;
   /* border-radius: 5px; */
   border: 1px solid #c3c4c7;
 }
 
-.table_2 .basic_filter p a{
+.web_version_2 .basic_filter p a{
   color: #B0A2AD;
   display: block;
   padding: 0;
   font-weight: 500;
   font-size: 14px;
 }
-.table_2 .basic_filter p {
+.web_version_2 .basic_filter p {
   margin-right: 3px;
   padding: 7px 13px;
   border-radius: 5px;
 }
-.table_2 .basic_filter p.active {
+.web_version_2 .basic_filter p.active {
   margin-right: 3px;
   background: #E1E3EA;
   padding: 7px 13px;
   border-radius: 5px;
 }
-.table_2 .basic_filter p.active a{
+.web_version_2 .basic_filter p.active a{
   color: #009EF7;
 }
-.table_2 .add_post_btn a{
+.web_version_2 .add_post_btn a{
   padding:11px 13px;
   font-weight: 500;
   font-size: 14px;
   display: block;
 }
-.table_2 .nav_indicator{
-  font-weight: 400;
-  font-size: 15px;
-  padding-top: 4px;
-  margin-left: 7px;
-}
-.table_2 .divider{
-  margin-left: 7px;
-  color:#ababab;
-  font-weight: 100;
-}
+
 /* .table-bordered>:not(caption)>*{
   border-width: 2px;
 } */

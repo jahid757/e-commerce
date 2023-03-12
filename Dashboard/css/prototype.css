@@ -94,6 +94,6 @@ input[type=checkbox], input[type=radio] {
     -ms-overflow-style: none; 
     scrollbar-width: none; 
 }
-.w-150{
-    width: 150px;
+.w-140{
+    width: 140px;
 }

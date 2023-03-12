@@ -23,13 +23,13 @@ body {
   top: 0;
   width: 200px;
   /* padding: 5px; */
-  margin-top: 55px;
+  margin-top: 32px;
   z-index: 9;
 }
 .content {
   position: relative;
   margin-left: 200px;
-  margin-top: 75px;
+  margin-top: 40px;
   
 }
 .top_bar {
@@ -39,7 +39,7 @@ body {
   width: 100%;
   right: 0;
   background-color: #1e1e1e;
-  z-index: 2;
+  z-index: 20;
   height:32px
 }
 .leftSideBar ul {
@@ -51,7 +51,7 @@ body {
   margin-right: 5px;
 }
 .leftSideBar ul li a {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.3;
   padding: 10px;
@@ -86,7 +86,7 @@ body {
 .top_bar span{
     color: #fff;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 12px;
     margin-left: 5px;
 }
 .profile{
@@ -95,10 +95,12 @@ body {
 
 .profile_content{
     position: absolute;
-    top: 44px;
-    left: -128px;
+    top: 28px;
+    left: -114px;
     background-color:#2c3338;
     visibility: hidden;
+    border: 1px solid #6c757d;
+    border-top: none;
 }
 .profile_content.active{
     visibility: visible;
@@ -125,6 +127,23 @@ body {
     margin-bottom: 3px;
     margin-top: -5px;
     display: block;
+}
+.pofile_link{
+    /* margin-top: 5px; */
+}
+.pofile_link li{
+    padding: 0 5px;
+    border-bottom: 1px solid #6c757d;
+}
+.pofile_link li:hover{
+    background-color: #3c3c3c;
+}
+.pofile_link li a{
+    display: block;
+    padding: 5px;
+}
+.pofile_link li:last-child{
+    border: none;
 }
 .leftSideBar.active{
     width: 37px;
@@ -202,3 +221,45 @@ body {
     letter-spacing: 2px;
     margin-bottom: 10px !important;
 }
+.card{
+    margin-bottom: 10px;
+}
+.top_bar .img_sm{
+    width:20px !important;
+    height:20px !important
+}
+.dropdown-item{
+    font-size: 13px;
+    color: #fff;
+}
+.dropdown-menu.show{
+    background:#2c3338
+}
+.dropdown-toggle.post_toggle{
+    position: relative;
+}
+.dropdown-toggle.post_toggle::after{
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.footer_text{
+    position: absolute;
+    bottom: 0;
+    /* left: 0; */
+    right: 0;
+    padding: 10px 20px;
+    color: #50575e;
+}
+.web_version_2 .nav_indicator{
+    font-weight: 400;
+    font-size: 15px;
+    padding-top: 4px;
+    margin-left: 7px;
+  }
+  .web_version_2 .divider{
+    margin-left: 7px;
+    color:#ababab;
+    font-weight: 100;
+  }
