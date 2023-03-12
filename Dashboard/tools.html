@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dashboard</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/4b5d72e539.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/prototype.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+  </head>
+  <body>
+    <div class="leftSideBar hide_scrollbar">
+      <nav>
+        <ul>
+          <li>
+            <a href="./index.html"><i class="fa fa-house"></i> Dashboard</a>
+          </li>
+          <li>
+            <a class="active" href="#"><i class="fa fa-pen"></i> Post</a>
+            <ul>
+              <li><a class="active" href="./posts.html">All Posts</a></li>
+              <li><a href="#">Add New</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="./profile.html"><i class="fa fa-user"></i> Profile</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <header class="top_bar p-2">
+      <div class="d-flex align-items-center justify-content-between">
+        <div>
+          <a class="d-flex align-items-center" href="#">
+            <img src="./images/logo.png" alt="logo" />
+            <span>WB Software</span>
+          </a>
+        </div>
+        <div class="profile">
+          <div id="profile_pic" onclick="toggleClass('profile_content')" class="profile_pic">
+            <img src="https://i.ibb.co/N61Bhkv/avater.jpg" alt="" />
+          </div>
+          <div id="profile_content" class="profile_content px-2">
+            <div class="w-150">
+              <div class="d-flex align-items-center border-bottom border-secondary">
+                <img src="https://i.ibb.co/N61Bhkv/avater.jpg" alt="">
+              <ul>
+                <li><a href="#">Jahid</a></li>
+                <li><span class="slogan">Web Developer</span></li>
+              </ul>
+              </div>
+              <ul style="
+              padding-left: 6px;
+              padding-bottom: 6px;
+          ">
+                <li><a href="#">Edit Profile</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+      <main>
+        <section>
+          <div class="container-fluid mt-3">
+            <div class="top_post d-flex align-items-center justify-content-between mb-3">
+              <h3>Dashboard</h3>
+            </div>
+            <div class="card_wrap">
+              <div class="row">
+
+                <div class="col-md-4 mb-3">
+
+                  <div class="card">
+                    <div onclick="toggleCard('card_body_1')" class="card-header">
+                      <div class="d-flex align-items-center justify-content-between">
+                        <h5 class="dash-title">Project</h5>
+                        <button><span class="dropdown-toggle"></span></button>
+                      </div>
+                    </div>
+                    <div id="card_body_1" class="card-body">
+                        <!-- <div class="col-md-4 col-12"> -->
+                            <div class="dash-content bg-main shadow-box rounded-3">
+                                <p class="dash-summary my-2">Total-Project: <span class="d-s-no">1</span></p>
+                                <a href="#" class="btn cHeaderBtn dash-btn">Project List</a>
+                            </div>
+                        <!-- </div> -->
+                    </div>
+                  </div>
+
+                </div>
+
+                
+
+
+                
+
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

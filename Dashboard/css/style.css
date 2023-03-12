@@ -30,6 +30,7 @@ body {
   position: relative;
   margin-left: 200px;
   margin-top: 75px;
+  
 }
 .top_bar {
   position: fixed;
@@ -39,6 +40,7 @@ body {
   right: 0;
   background-color: #1e1e1e;
   z-index: 2;
+  height:32px
 }
 .leftSideBar ul {
   padding: 0;
@@ -185,4 +187,18 @@ body {
   }
   .add_post_btn.second{
     display: none;
+}
+.cHeaderBtn{
+    font-weight: 500 !important;
+    color: #444545 !important;
+    width: 150px !important;
+    background: #fac077 !important;
+    border-color: #fac077!important;
+}
+.dash-summary{
+    font-size: 18px;
+    font-weight: 700;
+    color: #444545;
+    letter-spacing: 2px;
+    margin-bottom: 10px !important;
 }
