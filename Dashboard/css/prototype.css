@@ -87,12 +87,12 @@ input[type=checkbox], input[type=radio] {
     transition: .05s border-color ease-in-out;
 }
 .hide_scrollbar::-webkit-scrollbar {
-    display: none;
+    /* display: none; */
   }
 .hide_scrollbar{
     overflow-x: scroll;
-    -ms-overflow-style: none; 
-    scrollbar-width: none; 
+    /* -ms-overflow-style: none; 
+    scrollbar-width: none;  */
 }
 .w-140{
     width: 140px;

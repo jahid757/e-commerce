@@ -284,6 +284,8 @@ body {
     color: #50575e;
     margin-left: 200px;
     margin-top: 50px;
+    bottom: -45px;
+    padding-bottom: 10px;
 }
 .footer_text.active{
     margin-left: 50px;
