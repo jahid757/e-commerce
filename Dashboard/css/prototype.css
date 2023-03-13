@@ -97,3 +97,30 @@ input[type=checkbox], input[type=radio] {
 .w-140{
     width: 140px;
 }
+.text-gray-700 {
+    color: #5E6278;
+}
+.flex-stack {
+    justify-content: space-between;
+    align-items: center;
+}
+.fs-4 {
+    font-size: 1.25rem!important;
+}
+.fw-bold {
+    font-weight: 600!important;
+}
+.text-gray-600 {
+    color: #7E8299;
+}
+.fs-6 {
+    font-size: 1.075rem!important;
+}
+.svg-icon, .btn.btn-light-primary i {
+    color: #009EF7;
+}
+.btn .svg-icon {
+    flex-shrink: 0;
+    line-height: 0;
+    margin-right: 0.5rem;
+}
