@@ -13,8 +13,9 @@ body {
   font-size: 13px;
   line-height: 1.4em;
   /* min-width: 600px; */
-  /* position: relative; */
+  position: relative;
   padding-bottom: 30px;
+  min-height: 95vh;
 }
 
 .leftSideBar {
@@ -300,8 +301,14 @@ body {
   }
   .web_version_2 a#dropdownMenuLink{
     position: relative;
+    font-size: 12px;
   }
   .web_version_2 a#dropdownMenuLink::after{
     position: absolute;
-    top: 11px;
+    top: 9px;
+  }
+
+  .dropdown-menu select{
+    width: 100%;
+    margin-bottom: 10px;
   }

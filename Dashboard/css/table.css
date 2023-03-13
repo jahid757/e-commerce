@@ -113,6 +113,8 @@ table tbody tr td .trash {
   font-weight: 500;
   font-size: 14px;
   display: block;
+  /* text-align: center; */
+  /* margin-top: 10px; */
 }
 
 /* .table-bordered>:not(caption)>*{
@@ -148,4 +150,30 @@ table tbody tr td .trash {
 }
 .pagination .page-item{
   margin: 0 5px;
+}
+
+/* filter version 3 */
+.filter_3 .filter_options{
+  width: 200px;
+  background-color: #1e1e1e;
+  position: absolute;
+  left: -35px;
+  border-radius: 4px;
+  /* bottom: -18px; */
+  margin-top: 7px;
+}
+.left_side h3{
+  margin-right: 5px;
+}
+.filter_3 .filter_options h3{
+  font-size: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #bbb9b9;
+  color: #fff;
+  padding-bottom: 10px;
+}
+.filter_3 .filter_options h5{
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #fff;
 }

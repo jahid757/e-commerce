@@ -29,47 +29,50 @@
         </ul>
     </nav>
 </div>
-    <header class="top_bar px-2">
-      <div class="d-flex align-items-center justify-content-between">
-        <div class="d-flex align-items-center">
-          <a class="d-flex align-items-center" href="#">
-            <img class="img_sm" src="./images/logo.png" alt="logo" />
-            <span>WB Software</span>
-          </a>
-          <div class="dropdown ms-2">
-            <a class="dropdown-toggle text-white" href="javascript:void(0)" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-              New
-            </a>
-          
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Post</a></li>
-              <li><a class="dropdown-item" href="#">Media</a></li>
-              <li><a class="dropdown-item" href="#">Page</a></li>
-            </ul>
+<header class="top_bar px-2">
+  <div class="d-flex align-items-center justify-content-between">
+    <div class="toggle_left_menu">
+      <i onclick="controlLeftMenu()" class="fa fa-bars"></i>
+    </div>
+    <div class="d-flex align-items-center">
+      <a class="d-flex align-items-center" href="#">
+        <img class="img_sm" src="./images/logo.png" alt="logo" />
+        <span>WB Software</span>
+      </a>
+      <div class="dropdown ms-2">
+        <a class="dropdown-toggle text-white" href="javascript:void(0)" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+          New
+        </a>
+      
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <li><a class="dropdown-item" href="#">Post</a></li>
+          <li><a class="dropdown-item" href="#">Media</a></li>
+          <li><a class="dropdown-item" href="#">Page</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="profile">
+      <div id="profile_pic" onclick="toggleClass('profile_content')" class="profile_pic">
+        <img class="img_sm" src="https://i.ibb.co/N61Bhkv/avater.jpg" alt="" />
+      </div>
+      <div id="profile_content" class="profile_content">
+        <div class="w-140">
+          <div class="d-flex align-items-center border-bottom border-secondary">
+            <img src="https://i.ibb.co/N61Bhkv/avater.jpg" alt="">
+          <ul>
+            <li><a href="#">Jahid</a></li>
+            <li><span class="slogan">Web Developer</span></li>
+          </ul>
           </div>
-        </div>
-        <div class="profile">
-          <div id="profile_pic" onclick="toggleClass('profile_content')" class="profile_pic">
-            <img class="img_sm" src="https://i.ibb.co/N61Bhkv/avater.jpg" alt="" />
-          </div>
-          <div id="profile_content" class="profile_content">
-            <div class="w-140">
-              <div class="d-flex align-items-center border-bottom border-secondary">
-                <img src="https://i.ibb.co/N61Bhkv/avater.jpg" alt="">
-              <ul>
-                <li><a href="#">Jahid</a></li>
-                <li><span class="slogan">Web Developer</span></li>
-              </ul>
-              </div>
-              <ul class="pofile_link">
-                <li><a href="#">Edit Profile</a></li>
-                <li><a href="#">Logout</a></li>
-              </ul>
-            </div>
-          </div>
+          <ul class="pofile_link">
+            <li><a href="#">Edit Profile</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
         </div>
       </div>
-    </header>
+    </div>
+  </div>
+</header>
     <div id="content" class="content">
         
         <main>
@@ -318,7 +321,7 @@
 
     <div class="footer_text">
       <div class="container-fluid">
-        <div class="d-md-flex align-items-center justify-content-between">
+        <div class="d-sm-flex align-items-center justify-content-between">
           <p><em>Thank you for creating with <a href="#">Website</a></em></p>
           <p><em>Version 1.1</a></em></p>
         </div>

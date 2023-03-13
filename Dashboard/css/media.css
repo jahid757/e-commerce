@@ -48,6 +48,9 @@
     .add_post_btn.first{
         display: none;
     }
+    .web_version_2 .divider,.web_version_2 .nav_indicator{
+        display: none;
+    }
     
 }
 /* @media (max-width: 400px) {
@@ -55,11 +58,14 @@
         justify-content: space-between;
     }
 } */
-@media (max-width:530px) {
+@media (max-width:576px) {
     .right_side input{
         width: 80%;
     }
     .right_side button{
         width: 20%;
+    }
+    .footer_text{
+        text-align: center;
     }
 }
