@@ -117,3 +117,11 @@ body{
 .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{
     border: none;
 }
+.card-toolbar .table_button{
+    padding: 8px 13px;
+    border: 1px solid ;
+    background-color: #f6f7f7;
+}
+.mw-750px {
+    max-width: 750px!important;
+}
