@@ -154,26 +154,15 @@ table tbody tr td .trash {
 
 /* filter version 3 */
 .filter_3 .filter_options{
-  width: 200px;
-  background-color: #1e1e1e;
+  width: 240px;
+  background-color: #ffffff;
   position: absolute;
-  left: -35px;
+  left: -76px;
   border-radius: 4px;
   /* bottom: -18px; */
   margin-top: 7px;
+  box-shadow: 1px 0px 24px #c4bfbf;
 }
 .left_side h3{
   margin-right: 5px;
-}
-.filter_3 .filter_options h3{
-  font-size: 20px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #bbb9b9;
-  color: #fff;
-  padding-bottom: 10px;
-}
-.filter_3 .filter_options h5{
-  font-size: 18px;
-  margin-bottom: 5px;
-  color: #fff;
 }

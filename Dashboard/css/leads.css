@@ -4,6 +4,7 @@ body{
 .leads,.table_data{
     background-color:#fff;
     padding: 10px;
+    margin-bottom: 15px;
 }
 .leads_profile img{
     height:180px;

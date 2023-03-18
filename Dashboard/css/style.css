@@ -314,3 +314,126 @@ body {
     width: 100%;
     margin-bottom: 10px;
   }
+  .content.tools{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .flatpickr-calendar{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .custom_btn button{
+    background-color: #fac077;
+    padding: 10px 20px;
+    display: inline-block;
+    width: fit-content;
+    border-radius: 5px;
+  }
+  .custom_btn button.btn-2{
+    height: fit-content;
+    margin-left: 6px;
+    position: relative;
+    /* top: -3px; */
+    text-decoration: none;
+    border: 1px solid #2271b1;
+    border-radius: 5px;
+    text-shadow: none;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: normal;
+    color: #2271b1;
+    background: #f6f7f7;
+    cursor: pointer;
+  }
+  .custom_btn button.btn-3{
+    background-color: #2da062;
+  }
+  .custom_btn button.btn-2 span i{
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  
+  .custom_btn button.btn-3 span i{
+    color: white;
+  }
+  
+  .custom_btn button span{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .custom_btn button.btn-3 span{
+    color: #fff;
+  }
+  .custom_btn button span i{
+    margin-left:10px;
+  }
+  span.warn{
+    display: none;
+  }
+  span.warn.active{
+    display: block;
+  }
+
+  .passShow{
+    position: relative;
+  }
+  .passShow input{
+    padding-right: 23px;
+  }
+  .passShow i{
+    position: absolute;
+    right:5px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 0;
+  }
+
+.filter_options h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #bbb9b9;
+    /* color: #fff; */
+    padding-bottom: 10px;
+  }
+.filter_options h5{
+    font-size: 18px;
+    margin-bottom: 5px;
+    /* color: #fff; */
+  }
+.filter_options .select-btn{
+    background-color: #e1e3ea;
+  }
+  #filter_content{
+    display: none;
+  }
+  #filter_content.active{
+    display: block;
+  }
+
+  .select_imgWith_preview{
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+  .select_imgWith_preview img{
+    position: absolute;
+    width:100%;
+    height: 100%;
+  }
+  .select_imgWith_preview input[type="file"]{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .cross_mark{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 5px 7px;
+    border-radius: 50%;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1px rgba(0, 0, 0, 0.075);
+  }

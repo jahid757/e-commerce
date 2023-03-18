@@ -11,8 +11,10 @@
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="./css/prototype.css" />
     <link rel="stylesheet" href="./css/dashboard.css" />
+    <link rel="stylesheet" href="./css/select.css">
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/media.css" />
   </head>
@@ -75,12 +77,12 @@
       </div>
     </div>
   </header>
-    <div class="content">
+    <div class="content tools">
       <main>
         <section>
           <div class="container-fluid mt-3">
             <div class="top_post d-flex align-items-center justify-content-between mb-3">
-              <h3>Dashboard</h3>
+              <h3>Tools</h3>
             </div>
             <div class="card_wrap">
               <div class="row">
@@ -106,6 +108,89 @@
 
                 </div>
 
+                <div class="col-md-4 mb-3">
+                  <div class="card p-2">
+                    <label for="time">Time</label>
+                    <input type="time" placeholder="Time" name="time" id="time" class="form-control mb-2">
+                    
+                    <label for="date">Date</label>
+                    <input type="date" placeholder="YYYY-MM-DD" name="date" id="date" class="form-control">
+                  </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                  <div class="card p-2">
+                    <div class="custom_btn">
+                      <button><span>Upload <i class="fa fa-upload"></i></span></button>
+                      <button class="btn-2"><span><i class="fa fa-upload"></i> Upload </span></button>
+                      <button class="btn-3"><span>Upload <i class="fa fa-upload"></i></span></button>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-md-4 mb-3">
+                  <div class="card p-2">
+                    <div class="single_input">
+                      <input onblur="inputValidator(this.value,'warnTextName','text')" placeholder="Name" class="form-control" type="text" name="name" id="name">
+                      <span id="warnTextName" class="text-danger warn">Name is required</span>
+                    </div>
+
+                    <div class="single_input">
+                      <input onblur="inputValidator(this.value,'warnTextPassword','password' , 6)" placeholder="Password" class="form-control" type="password" name="password" id="password">
+                      <span id="warnTextPassword" class="text-danger warn">Password is required</span>
+                    </div>
+
+                    <div class="single_input">
+                      <div class="passShow">
+                        <input onblur="inputValidator(this.value,'warnTextPasswordConfirm','password' , 6)" placeholder="Confirm Password" class="form-control" type="password" name="cPassword" id="cPassword">
+                        <i onclick="showPass('cPassword')" class="fa fa-eye"></i>
+                      </div>
+                      <span id="warnTextPasswordConfirm" class="text-danger warn">Password is required</span>
+                    </div>
+
+                  </div>
+                </div>
+
+                
+                <div class="col-md-4 mb-3">
+                  <div class="card p-2">
+                    
+                    <div class="filter_options">
+                      <div class="search_wrapper">
+                        <h5>Role</h5>
+                        <div class="select-btn">
+                            <span>Role</span>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                        <div class="select_content">
+                            <div class="search">
+                                <input type="text" placeholder="Search">
+                            </div>
+                            <ul class="options">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+
+                  </div>
+                </div>
+
+
+                <div class="col-md-4 mb-3">
+                  <div class="card p-2">
+                    
+                    <div class="select_imgWith_preview">
+                      <img id="uploadPreview" src="./images/img_preview.png"/>
+                      <input id="uploadImage" type="file" name="myPhoto" onchange="PreviewImage();" />
+                      <i onclick="cancelPreview('uploadPreview')" class="fa-sharp fa-solid fa-xmark cross_mark"></i>
+                    </div>
+
+                  </div>
+                </div>
+
+
                 
 
 
@@ -126,7 +211,20 @@
         </div>
       </div>
     </div>
+
     <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="./js/script.js"></script>
+    <script src="./js/select.js"></script>
+    <script>
+      flatpickr("input[type=date]", {
+        dateFormat: "Y-m-d",
+      });
+      flatpickr("input[type=time]", {
+        enableTime: true,
+    noCalendar: true,
+    dateFormat: "H:i K",
+      });
+    </script>
   </body>
 </html>

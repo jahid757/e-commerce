@@ -54,6 +54,9 @@
   .web_version_2 .nav_indicator {
     display: none;
   }
+  #filter_content{
+    left: 0;
+  }
 }
 /* @media (max-width: 400px) {
     .include_add_post{
