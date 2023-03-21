@@ -1,0 +1,52 @@
+let saveData = {};
+const dataLists = {
+  role: ["admin", "user"],
+  lng: ["bn", "en", "hindi"],
+};
+function openSelectMenu(wrapper, option, input, buttonId, data,zIndex) {
+  saveData = {
+    wrapper: wrapper,
+    option: option,
+    input: input,
+    btn: buttonId,
+    data: data,
+    zIndex: zIndex
+  };
+
+  const wrapperElement = document.getElementById(wrapper);
+  const options = document.getElementById(option);
+  const zIndexElement = document.getElementById(zIndex);
+  // const zIndexPoint = zIndex.split('_')[2];
+  // zIndexElement.style.zIndex = `${10*zIndexPoint}`
+  wrapperElement.classList.toggle("active");
+  options.innerHTML = "";
+  dataLists[`${data}`].forEach((item) => {
+    let li = `<li onclick="updateRoleName(this)">${item}</li>`;
+    options.insertAdjacentHTML("beforeend", li);
+  });
+}
+
+function updateRoleName(selectedLi) {
+  const { wrapper, option, input, btn, data,zIndex } = saveData;
+  const search = document.getElementById(input);
+  search.value = "";
+
+  openSelectMenu(wrapper, option, input, btn, data, zIndex);
+  document.getElementById(wrapper).classList.remove("active");
+  document.getElementById(btn).firstElementChild.innerText =
+    selectedLi.innerText;
+}
+
+function search() {
+  let arr = [];
+  const searchElement = document.getElementById(saveData.input);
+  let searchedValue = searchElement.value.toLowerCase();
+  arr = dataLists[`${saveData.data}`]
+    .filter((data) => {
+      return data.toLowerCase().startsWith(searchedValue);
+    })
+    .map((data) => `<li onclick="updateRoleName(this)">${data}</li>`)
+    .join("");
+  const optionElement = document.getElementById(saveData.option);
+  optionElement.innerHTML = arr ? arr : `<p style="color: red">Wrong Input</p>`;
+}

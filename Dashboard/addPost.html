@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="./css/prototype.css" />
     <link rel="stylesheet" href="./css/dashboard.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/select.css">
+    <link rel="stylesheet" href="./css/addPost.css">
     <link rel="stylesheet" href="./css/media.css" />
   </head>
   <body class="web_version_2">
@@ -78,7 +80,208 @@
     <div class="content">
       <main>
         <div class="container-fluid">
+          <h2 class="h5">Add new Post</h2>
           
+
+          <div class="row">
+            <div class="col-md-8 mb-3">
+
+              <form action="" class="mb-3">
+                <div class="text_input">
+                  <div class="form-group mb-2">
+                  <input type="text" class="form-control" placeholder="Add title" name="title" id="title">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="h5" for="description">Add new post</label>
+                  <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
+                  </div>
+                </div>
+              </form>
+
+              <div class="card ">
+                <div onclick="toggleCard('card_body_1')" class="card-header">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <h5 class="dash-title">Project</h5>
+                    <button><span class="dropdown-toggle"></span></button>
+                  </div>
+                </div>
+                <div id="card_body_1" class="card-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates minima, ea corporis maiores exercitationem eum illum error tenetur veritatis dolores?</p>
+                </div>
+              </div>
+
+            </div>  <!-- col-md-8 end-->
+            <div class="col-md-4 mb-3">
+
+              <div class="card">
+                <div onclick="toggleCard('card_body_2')" class="card-header">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <h5 class="dash-title">WB Soft ইউনিকোড কনভার্টার </h5>
+                    <button><span class="dropdown-toggle"></span></button>
+                  </div>
+                </div>
+
+                <div id="card_body_2" class="card-body">
+                    <div class="filter_options">
+                      <div id="warperSelect" class="search_wrapper">
+                        <div class="title">
+                          <p>শ্রেণির নাম <span class="text-danger">(required)</span></p>
+                        </div>
+                        <div id="btnId" onclick="openSelectMenu('warperSelect','selectOptions','search','btnId','lng','select_content_1')" class="select-btn">
+                            <span>ক্লাস নির্বাচন করুন</span>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                        <div id="select_content_1" class="select_content">
+                            <div class="search">
+                                <input onkeyup="search()" id="search" type="text" placeholder="Search">
+                            </div>
+                            <ul id="selectOptions" class="options">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- <div class="card-body"> -->
+                      <div class="filter_options">
+                        <div id="warperSelect_2" class="search_wrapper">
+                          <div class="title">
+                            <p>শ্রেণির নাম <span class="text-danger">(required)</span></p>
+                          </div>
+                          <div id="btnId_2" onclick="openSelectMenu('warperSelect_2','selectOptions_2','search_2','btnId_2','role','select_content_2')" class="select-btn">
+                              <span>ক্লাস নির্বাচন করুন</span>
+                              <i class="fas fa-angle-down"></i>
+                          </div>
+                          <div id="select_content_2" class="select_content">
+                              <div class="search">
+                                  <input onkeyup="search()" id="search_2" type="text" placeholder="Search">
+                              </div>
+                              <ul id="selectOptions_2" class="options">
+                                  
+                              </ul>
+                          </div>
+                      </div>
+                      </div>
+                      <div class="filter_options">
+                        <div id="warperSelect_4" class="search_wrapper">
+                          <div class="title">
+                            <p>শ্রেণির নাম <span class="text-danger">(required)</span></p>
+                          </div>
+                          <div id="btnId_4" onclick="openSelectMenu('warperSelect_4','selectOptions_4','search_4','btnId_4','role','select_content_4')" class="select-btn">
+                              <span>ক্লাস নির্বাচন করুন</span>
+                              <i class="fas fa-angle-down"></i>
+                          </div>
+                          <div id="select_content_4" class="select_content">
+                              <div class="search">
+                                  <input onkeyup="search()" id="search_4" type="text" placeholder="Search">
+                              </div>
+                              <ul id="selectOptions_4" class="options">
+                                  
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="filter_options">
+                    <div id="warperSelect_3" class="search_wrapper">
+                      <div class="title">
+                        <p>শ্রেণির নাম <span class="text-danger">(required)</span></p>
+                      </div>
+                      <div id="btnId_3" onclick="openSelectMenu('warperSelect_3','selectOptions_3','search_3','btnId_3','role','select_content_3')" class="select-btn">
+                          <span>ক্লাস নির্বাচন করুন</span>
+                          <i class="fas fa-angle-down"></i>
+                      </div>
+                      <div id="select_content_3" class="select_content">
+                          <div class="search">
+                              <input onkeyup="search()" id="search_3" type="text" placeholder="Search">
+                          </div>
+                          <ul id="selectOptions_3" class="options">
+                              
+                          </ul>
+                      </div>
+                  </div>
+                  </div>
+
+                      <!-- </div> -->
+                  </div>
+
+                </div>
+
+                
+
+                    <div class="card">
+                <div onclick="toggleCard('card_body_3')" class="card-header">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <h5 class="dash-title">Categories</h5>
+                    <button><span class="dropdown-toggle"></span></button>
+                  </div>
+                </div>
+                <div id="card_body_3" class="card-body">
+                    <div class="d-flex categories_btn mt-1">
+                      <button class="active">All Categories</button>
+                      <button>Most Used</button>
+                    </div>
+                    <div class="categories_select">
+                      <ul>
+                        <li><input type="checkbox" name="uncategories" id="uncategories"> <label for="uncategories">Uncategories</label></li>
+                        <li><input type="checkbox" name="demo" id="demo"> <label for="demo">demo</label></li>
+                        <li>
+                          <ul class="ps-2"><li><input type="checkbox" name="demo2" id="demo2"> <label for="demo2">Demo 2</label></li></ul>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+              </div> 
+
+                    <div class="card">
+                <div onclick="toggleCard('card_body_4')" class="card-header">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <h5 class="dash-title">Tags</h5>
+                    <button><span class="dropdown-toggle"></span></button>
+                  </div>
+                </div>
+                <div id="card_body_4" class="card-body">
+                    <div class="my-1">
+                      <div class="d-flex align-items-center">
+                        <input id="tags" class="form-control" type="text">
+                        <button onclick="addTags()" class="table_button add_tag">Add</button>
+                      </div>
+                      <p class="my-2">Separate tag with comma</p>
+                      <div id="appendTags" class="d-flex">
+                        <p class="me-2"><span class="cursor-pointer"><i class="fa-solid fa-circle-xmark"></i></span> <span> trending</span></p>
+                        <p class="me-2"><span class="cursor-pointer"><i class="fa-solid fa-circle-xmark"></i></span> <span> trending</span></p>
+                      </div>
+                      <p><a class="text-decoration-underline" href="#">choose from the most used tags</a></p>
+                    </div>
+                    
+                </div>
+              </div> 
+
+                    <div class="card">
+                <div onclick="toggleCard('card_body_5')" class="card-header">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <h5 class="dash-title">Featured image</h5>
+                    <button><span class="dropdown-toggle"></span></button>
+                  </div>
+                </div>
+                <div id="card_body_5" class="card-body my-2 mb-3 position-relative">
+                    <a class="text-decoration-underline" href="#">set featured image</a>
+                    <input type="file" name="featuredImg" id="featuredImg" onchange="PreviewImage('featuredImg','featuredImgPreview')">
+                    <img class="w-100" id="featuredImgPreview" src="" alt="">
+                </div>
+              </div> 
+
+                    
+
+              </div>
+              
+              
+                
+
+
+            </div>
+          </div> <!--row end-->
+
         </div>
       </main>
     </div>
@@ -92,5 +295,6 @@
     </div>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/select_dynamic.js"></script>
   </body>
 </html>

@@ -28,13 +28,15 @@ $("#myModal").on("shown.bs.modal", function () {
 
 
 // input validation
-function inputValidator(e, warnText, type = "text", length ) {
+function inputValidator(e, warnText, type = "text", length=6 ) {
   const inputValue = e
   const warnTextContent = document.getElementById(warnText);
-  if (type === 'text' & inputValue === "" || undefined || null) {
-    warnTextContent.classList.add("active");
-  }else{
+  if (type === 'text') {
+    if(inputValue.length < 1){
+      warnTextContent.classList.add("active");
+    }else{
     warnTextContent.classList.remove('active')
+  }
   }
   if(type === "password"){
     if(inputValue.length < length){
@@ -45,9 +47,9 @@ function inputValidator(e, warnText, type = "text", length ) {
       warnTextContent.innerText = `Password must be ${length} character`
       }
       
-    }
-  }else{
+    }else{
     warnTextContent.classList.remove('active')
+  }
   }
 }
 function showPass(id){
@@ -64,15 +66,45 @@ function filterOption(){
   filter_content.classList.toggle("active");
 }
 
+// tag add remove and render
+let tags = ['trending','latest','djks']
+function addTags(){
+  const inputValue = document.getElementById('tags');
+  if(inputValue.value !== ''){
+    tags.push(inputValue.value)
+  }
+  renderTag()
+  inputValue.value = ''
+}
+
+function renderTag(){
+  const appendTag = document.getElementById('appendTags');
+  appendTag.innerHTML = ''
+  tags.forEach((item) => {
+    appendTag.innerHTML += `
+    <p onclick="removeTag('${item}')" class="me-2"><span  class="cursor-pointer"><i class="fa-solid fa-circle-xmark"></i></span> <span> ${item}</span></p>
+    `
+  })
+}
+renderTag()
+
+function removeTag(items){
+  const filteredItems = tags.filter((item) =>{
+   return item !== items
+  })
+  tags = filteredItems
+  renderTag()
+
+}
 
 // img preview
 
-function PreviewImage() {
+function PreviewImage(selectFile,previewImg) {
   var oFReader = new FileReader();
-  oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
+  oFReader.readAsDataURL(document.getElementById(selectFile).files[0]);
 
   oFReader.onload = function (oFREvent) {
-      document.getElementById("uploadPreview").src = oFREvent.target.result;
+      document.getElementById(previewImg).src = oFREvent.target.result;
   };
 };
 
