@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dashboard</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/4b5d72e539.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/prototype.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <link rel="stylesheet" href="./css/select.css">
+    <link rel="stylesheet" href="./css/pos.css">
+  </head>
+  <body class="web_version_2">
+    <div id="left_side" class="leftSideBar hide_scrollbar">
+      <nav>
+          <ul class="left_nav">
+              <li><a href="./index.html"><i class="fa fa-house"></i> <span>Dashboard</span></a></li>
+              <li><a onclick="toggleCard('post_sub_menu')" class="dropdown-toggle post_toggle" href="javascript:void(0)"><i class="fa fa-pen"> </i> <span>Post</span></a>
+                <ul id="post_sub_menu" class="toggle_sub_menu">
+                  <li><a class="active" href="./post1.html"><span>All Posts</span></a></li>
+                  <li><a href="#"><span>Add New</span></a></li>
+                </ul></li>
+              <li><a href="./profile.html"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+              <li class="collapse" onclick="toggleClass('left_side','content')"><a href="javascript:void(0)"><i class="fa fa-play"></i> <span>Collapse</span></a></li>
+          </ul>
+      </nav>
+  </div>
+  <header class="top_bar px-2">
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="toggle_left_menu">
+        <i onclick="controlLeftMenu()" class="fa fa-bars"></i>
+      </div>
+      <div class="d-flex align-items-center">
+        <a class="d-flex align-items-center" href="#">
+          <img class="img_sm" src="./images/logo.png" alt="logo" />
+          <span>WB Software</span>
+        </a>
+        <div class="dropdown ms-2">
+          <a class="dropdown-toggle text-white" href="javascript:void(0)" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            New
+          </a>
+        
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Post</a></li>
+            <li><a class="dropdown-item" href="#">Media</a></li>
+            <li><a class="dropdown-item" href="#">Page</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="profile">
+        <div id="profile_pic" onclick="toggleClass('profile_content')" class="profile_pic">
+          <img class="img_sm" src="https://i.ibb.co/N61Bhkv/avater.jpg" alt="" />
+        </div>
+        <div id="profile_content" class="profile_content">
+          <div class="w-140">
+            <div class="d-flex align-items-center border-bottom border-secondary">
+              <img src="https://i.ibb.co/N61Bhkv/avater.jpg" alt="">
+            <ul>
+              <li><a href="#">Jahid</a></li>
+              <li><span class="slogan">Web Developer</span></li>
+            </ul>
+            </div>
+            <ul class="pofile_link">
+              <li><a href="#">Edit Profile</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+    <div class="content">
+      <main>
+        <div class="container">
+            <h4  class="mb-3">Invoice</h4>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card p-4">
+                        <form action="" id="kt_invoice_form">
+                            <div class="d-flex flex-column align-items-start align-items-center flex-xxl-row mb-4">
+                                <div class="d-flex align-items-center flex-equal fw-row me-4 order-2" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-original-title="Specify invoice date" data-kt-initialized="1">
+                                    <div class="fs-6 fw-bold text-gray-700 text-nowrap">Date:</div>  
+                                    <div class="position-relative d-flex align-items-center w-150px">
+                                        <input class="form-control-transparent fw-bold pe-5 flatpickr-input" placeholder="Select date" name="invoice_date" type="date" readonly="readonly" id="date">           
+                                    </div>         
+                                </div>                
+                                <div class="d-flex flex-center flex-equal fw-row text-nowrap order-1 order-xxl-2 me-4" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-original-title="Enter invoice number" data-kt-initialized="1">
+                                    <span class="fs-2x fw-bold text-gray-800">Invoice #</span> 
+                                    <input type="text" class="form-control-flush fw-bold text-muted fs-3 w-125px" value="2021001" placehoder="...">
+                                </div>                
+                                <div class="d-flex align-items-center justify-content-end flex-equal order-3 fw-row" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-original-title="Specify invoice due date" data-kt-initialized="1">
+                                    <div class="fs-6 fw-bold text-gray-700 text-nowrap">Due Date:</div>  
+                                    <div class="position-relative d-flex align-items-center w-150px">
+                                        <input class="form-control-transparent fw-bold pe-5 flatpickr-input" placeholder="Select date" name="invoice_due_date" type="text" readonly="readonly" id="dueDate">
+                                    </div>
+                                </div>                
+                            </div>                
+                            <div class="separator separator-dashed my-10"></div>
+                            <div class="mb-0 input_background">
+                                <div class="row gx-10 mb-5">
+                                    <div class="col-lg-6">
+                                        <label class="form-label fs-6 fw-bold text-gray-700 mb-3">Bill From</label>
+                                        <div class="mb-5">
+                                            <input type="text" class="form-control-solid" placeholder="Name">
+                                        </div>
+                                        <div class="mb-5">
+                                            <input type="text" class="form-control-solid" placeholder="Email">
+                                        </div>
+                                        <div class="mb-5">
+                                            <textarea name="notes" class="form-control-solid" rows="3" placeholder="Who is this invoice from?" spellcheck="false"></textarea>
+                                        </div>
+                                    </div>                
+                                    <div class="col-lg-6">
+                                        <label class="form-label fs-6 fw-bold text-gray-700 mb-3">Bill To</label>
+                                        <div class="mb-5">
+                                            <input type="text" class="form-control-solid" placeholder="Name">
+                                        </div>
+                                        <div class="mb-5">
+                                            <input type="text" class="form-control-solid" placeholder="Email">
+                                        </div>
+                                        <div class="mb-5">
+                                            <textarea name="notes" class="form-control-solid" rows="3" placeholder="What is this invoice for?" spellcheck="false"></textarea>
+                                        </div>
+                                    </div>                
+                                </div>                
+                
+                                <div class="table-responsive mb-10 border-bottom-transparent">
+                                    <table class="table g-5 gs-0 mb-0 fw-bold text-gray-700" data-kt-element="items">
+                                        <thead>
+                                            <tr class="border-bottom fs-7 fw-bold text-gray-700 text-uppercase">
+                                                <th class="min-w-300px w-475px">Item</th>
+                                                <th class="min-w-100px w-100px">QTY</th>
+                                                <th class="min-w-150px w-150px">Price</th>
+                                                <th class="min-w-100px w-150px text-end">Total</th>
+                                                <th class="min-w-75px w-75px text-end">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="border-bottom border-bottom-dashed">
+                                                <td class="pe-7">                                            
+                                                    <input type="text" class="form-control-solid mb-2" name="name" placeholder="Item name">
+                
+                                                    <input type="text" class="form-control-solid" name="description" placeholder="Description">     
+                                                </td>
+                
+                                                <td class="ps-0">                                            
+                                                    <input type="text" class="form-control-solid" min="1" name="quantity" placeholder="1" value="1" data-kt-element="quantity">
+                                                </td>
+                
+                                                <td>   
+                                                    <input type="text" class="form-control-solid text-end" name="price" placeholder="0.00" value="0.00" data-kt-element="price">
+                                                </td>
+                                                
+                                                <td class="pt-8 text-end text-nowrap">
+                                                    $<span data-kt-element="total">0.00</span>
+                                                </td>
+                
+                                                <td class="pt-3 text-end">
+                                                    <button type="button" class="btn btn-sm btn-icon btn-active-color-primary" data-kt-element="remove-item">
+                                                        <i class="fa-solid fa-trash"></i>                                  </button>                             
+                                                </td>
+                                            </tr>          
+                                        </tbody>
+                                        <tfoot>
+                                            <tr class="border-top border-top-dashed align-top fs-6 fw-bold text-gray-700">
+                                                <th class="text-primary">
+                                                    <button class="btn btn-link py-1">Add item</button>
+                                                </th>  
+                
+                                                <th colspan="2" class="border-bottom border-bottom-dashed ps-0">
+                                                    <div class="d-flex flex-column align-items-start">
+                                                        <div class="fs-5">Subtotal</div> 
+                
+                                                        <button class="btn btn-link py-1" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-original-title="Coming soon" data-kt-initialized="1">Add tax</button>
+                
+                                                        <button class="btn btn-link py-1" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-original-title="Coming soon" data-kt-initialized="1">Add discount</button>
+                                                    </div>
+                                                </th> 
+                
+                                                <th colspan="2" class="border-bottom border-bottom-dashed text-end">
+                                                    $<span data-kt-element="sub-total">0.00</span>
+                                                </th> 
+                                            </tr>    
+                                            
+                                            <tr class="align-top fw-bold text-gray-700">
+                                                <th></th>
+                                                
+                                                <th colspan="2" class="fs-4 ps-0">Total</th> 
+                
+                                                <th colspan="2" class="text-end fs-4 text-nowrap">
+                                                    $<span data-kt-element="grand-total">0.00</span>
+                                                </th> 
+                                            </tr>          
+                                        </tfoot>
+                                    </table>
+                                </div>  
+                                <table class="table d-none" data-kt-element="item-template">
+                                    <tbody><tr class="border-bottom border-bottom-dashed" data-kt-element="item">
+                                        <td class="pe-7">                                            
+                                            <input type="text" class="form-control-solid mb-2" name="name[]" placeholder="Item name">
+                
+                                            <input type="text" class="form-control-solid" name="description[]" placeholder="Description">     
+                                        </td>
+                
+                                        <td class="ps-0">                                            
+                                            <input type="text" class="form-control-solid" min="1" name="quantity[]" placeholder="1" data-kt-element="quantity">
+                                        </td>
+                
+                                        <td>   
+                                            <input type="text" class="form-control-solid text-end" name="price[]" placeholder="0.00" data-kt-element="price">
+                                        </td>
+                                        
+                                        <td class="pt-8 text-end">
+                                            $<span data-kt-element="total">0.00</span>
+                                        </td>
+                
+                                        <td class="pt-5 text-end">
+                                            <button type="button" class="btn btn-sm btn-icon btn-active-color-primary" data-kt-element="remove-item">
+                                                <i class="ki-duotone ki-trash fs-3"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></i>                            </button>                             
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                
+                                <table class="table d-none" data-kt-element="empty-template">
+                                    <tbody><tr data-kt-element="empty">
+                                        <th colspan="5" class="text-muted text-center py-10">
+                                            No items
+                                        </th>
+                                    </tr>
+                                </tbody></table>    
+                                <div class="mb-0">
+                                    <label class="form-label fs-6 fw-bold text-gray-700">Notes</label>
+                
+                                    <textarea name="notes" class="form-control-solid" rows="3" placeholder="Thanks for your business"></textarea>
+                                </div>              
+                            </div>         
+                        </form>
+        
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3 ">
+                        <div class="filter_options pb-3 mb-3 border-bottom">
+                            <div id="warperSelect_3" class="search_wrapper">
+                              <div class="title">
+                                <p class="fw-bold fs-6 mb-3">Currency</p>
+                              </div>
+                              <div id="btnId_3" onclick="openSelectMenu('warperSelect_3','selectOptions_3','search_3','btnId_3','currency','select_content_3')" class="select-btn">
+                                  <span>Select Currency</span>
+                                  <i class="fas fa-angle-down"></i>
+                              </div>
+                              <div id="select_content_3" class="select_content">
+                                  <div class="search">
+                                      <input onkeyup="search()" id="search_3" type="text" placeholder="Search">
+                                  </div>
+                                  <ul id="selectOptions_3" class="options">
+                                      
+                                  </ul>
+                              </div>
+                          </div>
+                          </div>
+
+                          <div class="pb-3 mb-3 border-bottom">
+                            <div class="my-2">
+                              <div class="form-check form-switch">
+                                  <label class="form-check-label" for="flexSwitchCheckDefault">Payment method</label>
+                                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                </div>
+                            </div>
+  
+                            <div class="my-2">
+                              <div class="form-check form-switch">
+                                  <label class="form-check-label" for="flexSwitchCheckDefault2">Late fees</label>
+                                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault2">
+                                </div>
+                            </div>
+  
+                            <div class="my-2">
+                              <div class="form-check form-switch">
+                                  <label class="form-check-label" for="flexSwitchCheckDefault3">Notes</label>
+                                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault3">
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="row mb-5">
+                            <div class="col">
+                                <a href="#" class="btn btn-light btn-active-light-primary w-100">Preview</a>                
+                            </div>   
+                            <div class="col">
+                                <a href="#" class="btn btn-light btn-active-light-primary w-100">Download</a>
+                            </div>  
+                        </div>
+
+                          <div class="mb-5">
+                            <button class="submit_btn btn w-100">
+                              <i class="fa-regular fa-paper-plane text-white"></i>
+                              Send Invoice
+                            </button>
+                        </div>
+
+
+
+                          
+
+                    </div>
+                </div>
+            </div>
+        </div>
+      </main>
+    </div>
+    <div class="footer_text">
+      <div class="container-fluid">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <p><em>Thank you for creating with <a href="#">Website</a></em></p>
+          <p><em>Version 1.1</a></em></p>
+        </div>
+      </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/select_dynamic.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("input[type=date]", {
+          dateFormat: "Y-m-d",
+        });
+        flatpickr("input#dueDate", {
+          dateFormat: "Y-m-d",
+        });
+      </script>
+  </body>
+</html>

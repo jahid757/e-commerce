@@ -2,6 +2,7 @@ let saveData = {};
 const dataLists = {
   role: ["admin", "user"],
   lng: ["bn", "en", "hindi"],
+  currency: ['USD&nbsp;-&nbsp;USA dollar','GBP&nbsp;-&nbsp;British pound','AUD&nbsp;-&nbsp;Australian dollar','JPY&nbsp;-&nbsp;Japanese yen','SEK&nbsp;-&nbsp;Swedish krona','CAD&nbsp;-&nbsp;Canadian dollar','CHF&nbsp;-&nbsp;Swiss franc']
 };
 function openSelectMenu(wrapper, option, input, buttonId, data,zIndex) {
   saveData = {

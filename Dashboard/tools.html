@@ -154,26 +154,24 @@
 
                 
                 <div class="col-md-4 mb-3">
-                  <div class="card p-2">
-                    
-                    <div class="filter_options">
-                      <div class="search_wrapper">
-                        <h5>Role</h5>
-                        <div class="select-btn">
-                            <span>Role</span>
-                            <i class="fas fa-angle-down"></i>
-                        </div>
-                        <div class="select_content">
-                            <div class="search">
-                                <input type="text" placeholder="Search">
-                            </div>
-                            <ul class="options">
-                                
-                            </ul>
-                        </div>
-                    </div>
-                    </div>
-
+                  <div class="filter_options">
+                    <div id="warperSelect_3" class="search_wrapper">
+                      <div class="title">
+                        <p>Role</p>
+                      </div>
+                      <div id="btnId_3" onclick="openSelectMenu('warperSelect_3','selectOptions_3','search_3','btnId_3','role','select_content_3')" class="select-btn">
+                          <span>Select Role</span>
+                          <i class="fas fa-angle-down"></i>
+                      </div>
+                      <div id="select_content_3" class="select_content">
+                          <div class="search">
+                              <input onkeyup="search()" id="search_3" type="text" placeholder="Search">
+                          </div>
+                          <ul id="selectOptions_3" class="options">
+                              
+                          </ul>
+                      </div>
+                  </div>
                   </div>
                 </div>
 

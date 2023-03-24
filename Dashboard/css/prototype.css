@@ -187,3 +187,24 @@ input[type=checkbox], input[type=radio] {
 .mb-15 {
     margin-bottom: 3.75rem !important;
 }
+
+.dropdown.show > .form-control.form-control-transparent, .form-control.form-control-transparent:active, .form-control.form-control-transparent.active, .form-control.form-control-transparent:focus, .form-control.form-control-transparent.focus {
+    background-color: transparent;
+    border-color: transparent;
+}
+.form-control-transparent,.form-control-flush{
+    background: transparent;
+    border: none;
+}
+.w-125px {
+    width: 125px !important;
+}
+.btn-link{
+    color:#181C32
+}
+.btn-link:hover {
+    color: #0095e8;
+}
+.pt-8 {
+    padding-top: 1.45rem !important;
+}
