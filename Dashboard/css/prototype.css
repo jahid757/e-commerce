@@ -127,3 +127,63 @@ input[type=checkbox], input[type=radio] {
 .cursor-pointer{
     cursor: pointer;
 }
+.fw-semibold {
+    font-weight: 500 !important;
+}
+.fs-7 {
+    font-size: 0.95rem !important;
+}
+.text-gray-800{
+    color: #3F4254;
+}
+.mb-12 {
+    margin-bottom: 3rem !important;
+}
+.bg-danger{
+    color:#f1416c
+}
+.bullet {
+    display: inline-block;
+    background-color: var(--bs-bullet-bg-color);
+    border-radius: 6px;
+    width: 8px;
+    height: 4px;
+    flex-shrink: 0;
+}
+.bullet-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 100% !important;
+}
+.mb-9 {
+    margin-bottom: 2.25rem !important;
+}
+.badge-light-success {
+    color: #50cd89;
+    background-color: #e8fff3;
+}
+.badge-light-warning {
+    color: #ffc700;
+    background-color:#fff8dd;
+}
+.p-9 {
+    padding: 2.25rem !important;
+}
+.border-dashed {
+    border-style: dashed !important;
+}
+.border-gray-300 {
+    border-color: #E1E3EA!important;
+}
+.card-rounded {
+    border-radius: 0.625rem;
+}
+.mb-8 {
+    margin-bottom: 2rem !important;
+}
+.mb-6 {
+    margin-bottom: 1.5rem !important;
+}
+.mb-15 {
+    margin-bottom: 3.75rem !important;
+}

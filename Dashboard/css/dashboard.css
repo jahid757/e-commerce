@@ -23,6 +23,16 @@
     width: 50%;
     font-size: 14px;
 }
+.card .dropdown-menu{
+    display :none;
+}
+ul.dropdown-menu.show{
+    display: block;
+}
+.card .dropdown-menu.show li{
+    width: auto;
+    display:block
+}
 .single_input{
     margin-bottom: 10px;
 }

@@ -290,7 +290,7 @@
                                     <th scope="col"><span>Name & Email</span></th>
                                     <th scope="col"><span>Mobile</span></th>
                                     <th scope="col"><span>Post</span></th>
-                                    <th scope="col"><span>Visiting Card</span></th>
+                                    <th scope="col"><span>Action</span></th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -298,34 +298,71 @@
                                   <tr>
                                     <!-- <th scope="row"><input type="checkbox" name="select" id="select"></th> -->
                                     <td>
-                                      <strong>Jahid</strong>
+                                      <strong>Jahid</strong> <br>
+                                      <strong>Hasan</strong>
                                     </td>
-                                    <td><a href="tel:017000000">0170000000</a></td>
-                                    <td><a href="#">Demo</a></td>
-                                    <td> Demo</td>
+                                    <td><a href="tel:017000000">0170000000</a> <br>
+                                      <a href="tel:017000000">0170000000</a>
+                                    </td>
+                                    <td><a href="#">Demo</a><br><a href="#">Demo</a></td>
+                                    <td><div class="dropdown">
+                                      <button type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-bars "></i>
+                                      </button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                      </ul>
+                                    </div></td>
                                   </tr>
-
-                                  
+            
                                   <tr>
                                     <!-- <th scope="row"><input type="checkbox" name="select" id="select"></th> -->
                                     <td>
-                                      <strong>Jahid</strong>
+                                      <strong>Jahid</strong> <br>
+                                      <strong>Hasan</strong>
                                     </td>
-                                    <td><a href="tel:017000000">0170000000</a></td>
-                                    <td><a href="#">Demo</a></td>
-                                    <td> Demo</td>
+                                    <td><a href="tel:017000000">0170000000</a> <br>
+                                      <a href="tel:017000000">0170000000</a>
+                                    </td>
+                                    <td><a href="#">Demo</a><br><a href="#">Demo</a></td>
+                                    <td><div class="dropdown">
+                                      <button type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-bars "></i>
+                                      </button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                      </ul>
+                                    </div></td>
                                   </tr>
-
-                                  
+            
                                   <tr>
                                     <!-- <th scope="row"><input type="checkbox" name="select" id="select"></th> -->
                                     <td>
-                                      <strong>Jahid</strong>
+                                      <strong>Jahid</strong> <br>
+                                      <strong>Hasan</strong>
                                     </td>
-                                    <td><a href="tel:017000000">0170000000</a></td>
-                                    <td><a href="#">Demo</a></td>
-                                    <td> Demo</td>
+                                    <td><a href="tel:017000000">0170000000</a> <br>
+                                      <a href="tel:017000000">0170000000</a>
+                                    </td>
+                                    <td><a href="#">Demo</a><br><a href="#">Demo</a></td>
+                                    <td><div class="dropdown">
+                                      <button type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-bars "></i>
+                                      </button>
+                                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                      </ul>
+                                    </div></td>
                                   </tr>
+
+                                  
+                                  
 
                                   
                                   
@@ -362,15 +399,15 @@
 
               <div class="table_data rounded">
                 <div class="card border-0">
-                  <div class="card-header border-0">
-                    <div class="card-title mb-0">
-                        <h2>Contact Details</h2>
-                    </div>
-                    <div class="card-toolbar">
-                        <button class="table_button add"  data-bs-toggle="modal" data-bs-target="#customer">Add New</button>
+                  <div onclick="toggleCard('card_body_1')" class="card-header border-0">
+                      <div class="d-flex align-items-center justify-content-between w-100 border-bottom pb-2">
+                        <div class="card-title mb-0">
+                          <h2>Contact Details</h2>
+                      </div>
+                        <button><span class="dropdown-toggle"></span></button>
                     </div>
                 </div>
-                <div class="card-body">
+                <div id="card_body_1" class="card-body">
                   <div class="">
                     <section class="row">
                         <div class="col-lg-12 table_wrap hide_scrollbar">
@@ -675,6 +712,7 @@
                   </span>
               </div>
           </div>
+
             <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
                 <form id="jquery-val-form" action="" method="post" enctype="multipart/form-data">
                     
