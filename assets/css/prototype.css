@@ -184,6 +184,9 @@ input[type=checkbox], input[type=radio] {
 .mb-6 {
     margin-bottom: 1.5rem !important;
 }
+.my-6 {
+    margin: 1.5rem 0 !important;
+}
 .mb-15 {
     margin-bottom: 3.75rem !important;
 }
@@ -207,4 +210,40 @@ input[type=checkbox], input[type=radio] {
 }
 .pt-8 {
     padding-top: 1.45rem !important;
+}
+.carousel-item,.carousel-inner,#carouselExampleCaptions, .carousel-item img{
+    height: 100%;
+}
+.card-item {
+    flex: 0 0 12.33%;
+    padding: 0 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.card-items-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+    justify-content: center;
+}
+.card-item p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.p-item-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+    padding: 0;
+    justify-content: flex-start;
+}
+
+.p-item {
+    flex: 0 0 20%;
+    max-width: 20%;
+    padding: 0 5px 10px;
+    margin-bottom: 0;
+    display: flex;
+    position: relative;
 }

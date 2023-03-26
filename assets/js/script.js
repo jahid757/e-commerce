@@ -66,27 +66,7 @@ function filterOption(){
   filter_content.classList.toggle("active");
 }
 
-// tag add remove and render
-let tags = ['trending','latest','djks']
-function addTags(){
-  const inputValue = document.getElementById('tags');
-  if(inputValue.value !== ''){
-    tags.push(inputValue.value)
-  }
-  renderTag()
-  inputValue.value = ''
-}
 
-function renderTag(){
-  const appendTag = document.getElementById('appendTags');
-  appendTag.innerHTML = ''
-  tags.forEach((item) => {
-    appendTag.innerHTML += `
-    <p onclick="removeTag('${item}')" class="me-2"><span  class="cursor-pointer"><i class="fa-solid fa-circle-xmark"></i></span> <span> ${item}</span></p>
-    `
-  })
-}
-renderTag()
 
 function removeTag(items){
   const filteredItems = tags.filter((item) =>{
@@ -110,17 +90,20 @@ function PreviewImage(selectFile,previewImg) {
 
  function cancelPreview(id){
   const img = document.getElementById(id);
-  img.src = './images/img_preview.png'
+  img.src = '../assets/images/img_preview.png'
  }
 
 // remove class
 document.onclick = function (e) {
   const profile = document.getElementById("profile_content");
-  if (
-    e.target.parentNode.id !== "profile_pic" &&
-    e.target.parentNode.id !== "profile_content" &&
-    e.target.parentNode.parentNode.id !== "profile_content"
-  ) {
-    profile.classList.remove("active");
+  if (profile){
+    if (
+    
+      e.target.parentNode.id !== "profile_pic" &&
+      e.target.parentNode.id !== "profile_content" &&
+      e.target.parentNode.parentNode.id !== "profile_content"
+    ) {
+      profile.classList.remove("active");
+    }
   }
 };

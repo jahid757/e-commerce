@@ -10,13 +10,13 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/prototype.css" />
-    <link rel="stylesheet" href="./css/dashboard.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/select.css">
-    <link rel="stylesheet" href="./css/addPost.css">
-    <link rel="stylesheet" href="./css/media.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/prototype.css" />
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/select.css">
+    <link rel="stylesheet" href="../assets/css/addPost.css">
+    <link rel="stylesheet" href="../assets/css/media.css" />
   </head>
   <body class="web_version_2">
     <div id="left_side" class="leftSideBar hide_scrollbar">
@@ -40,7 +40,7 @@
       </div>
       <div class="d-flex align-items-center">
         <a class="d-flex align-items-center" href="#">
-          <img class="img_sm" src="./images/logo.png" alt="logo" />
+          <img class="img_sm" src="../assets/images/logo.png" alt="logo" />
           <span>WB Software</span>
         </a>
         <div class="dropdown ms-2">
@@ -293,8 +293,31 @@
         </div>
       </div>
     </div>
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/select_dynamic.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/select_dynamic.js"></script>
+    <script>
+      // tag add remove and render
+      let tags = ['trending','latest','djks']
+      function addTags(){
+        const inputValue = document.getElementById('tags');
+        if(inputValue.value !== ''){
+          tags.push(inputValue.value)
+        }
+        renderTag()
+        inputValue.value = ''
+      }
+
+      function renderTag(){
+        const appendTag = document.getElementById('appendTags');
+        appendTag.innerHTML = ''
+        tags.forEach((item) => {
+          appendTag.innerHTML += `
+          <p onclick="removeTag('${item}')" class="me-2"><span  class="cursor-pointer"><i class="fa-solid fa-circle-xmark"></i></span> <span> ${item}</span></p>
+          `
+        })
+      }
+      renderTag()
+    </script>
   </body>
 </html>
