@@ -74,8 +74,8 @@ input[type=checkbox], input[type=radio] {
     cursor: pointer;
     display: inline-block;
     line-height: 0;
-    height: 1rem;
-    margin: -0.25rem 0.25rem 0 0;
+    /* height: 1rem; */
+    /* margin: -0.25rem 0.25rem 0 0; */
     outline: 0;
     padding: 0!important;
     text-align: center;
@@ -246,4 +246,7 @@ input[type=checkbox], input[type=radio] {
     margin-bottom: 0;
     display: flex;
     position: relative;
+}
+.bg-hover:hover{
+    background-color: #ddd;
 }

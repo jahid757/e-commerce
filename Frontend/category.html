@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/4b5d72e539.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/prototype.css" />
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/media.css" />
+    <link rel="stylesheet" href="../assets/css/select.css">
+    <link rel="stylesheet" href="../assets/css/frontend.css">
+  </head>
+  <body class="web_version_2">
+  <header class="top_bar px-2">
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="toggle_left_menu">
+        <i onclick="controlLeftMenu()" class="fa fa-bars"></i>
+      </div>
+      <div class="d-flex align-items-center">
+        <a class="d-flex align-items-center" href="#">
+          <img class="img_sm" src="../assets/images/logo.png" alt="logo" />
+          <span>WB Software</span>
+        </a>
+        <div class="dropdown ms-2">
+          <a class="dropdown-toggle text-white" href="javascript:void(0)" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            New
+          </a>
+        
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Post</a></li>
+            <li><a class="dropdown-item" href="#">Media</a></li>
+            <li><a class="dropdown-item" href="#">Page</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </header>
+    <div class="content ms-0">
+      <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="card p-2">
+
+                        <div class="price_range">
+                            <label for="customRange1" class="form-label">Example range</label>
+                            <input type="range" class="form-range" id="customRange1">
+                            <div class="mt-3 d-flex align-items-center justify-content-between">
+                                <input class="w-50 mx-1 form-control" value="0" type="text">
+                                <input class="w-50 mx-1 form-control" value="12217" type="text">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="card p-2">
+                        <div onclick="toggleCard('card_body_1')" class="card-header bg-white">
+                          <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="dash-title">Availability</h5>
+                            <button><span class="dropdown-toggle"></span></button>
+                          </div>
+                        </div>
+                        <div id="card_body_1" class="p-1">
+                            <div class="px-1 d-flex align-items-center bg-hover">
+                                <input  type="checkbox" name="stock" id="stock">
+                                <label class="w-100 ms-2" for="stock">In Stock</label>
+                            </div>
+
+                            <div class="px-1 d-flex align-items-center bg-hover">
+                                <input  type="checkbox" name="pre_order" id="pre_order">
+                                <label class="w-100 ms-2" for="pre_order">Pre Order</label>
+                            </div>
+
+                            <div class="px-1 d-flex align-items-center bg-hover">
+                                <input  type="checkbox" name="upComing" id="upComing">
+                                <label class="w-100 ms-2" for="upComing">Upcoming</label>
+                            </div>
+
+                        </div>
+                      </div>
+
+
+                    <div class="card p-2">
+                        <div onclick="toggleCard('card_body_2')" class="card-header bg-white">
+                          <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="dash-title">Series</h5>
+                            <button><span class="dropdown-toggle"></span></button>
+                          </div>
+                        </div>
+                        <div id="card_body_2" class="p-1">
+                            <div class="px-1 d-flex align-items-center bg-hover">
+                                <input  type="checkbox" name="cLaptop" id="cLaptop">
+                                <label class="w-100 ms-2" for="cLaptop">Consumer Laptops</label>
+                            </div>
+
+                            <div class="px-1 d-flex align-items-center bg-hover">
+                                <input  type="checkbox" name="bLaptop" id="bLaptop">
+                                <label class="w-100 ms-2" for="bLaptop">Business Laptops</label>
+                            </div>
+
+                            <div class="px-1 d-flex align-items-center bg-hover">
+                                <input  type="checkbox" name="GLaptop" id="GLaptop">
+                                <label class="w-100 ms-2" for="GLaptop">Gaming Laptops</label>
+                            </div>
+
+                        </div>
+                      </div>
+
+                </div>
+                <div class="col-md-10">
+                    <div class="filter_header">
+                        <div class="card p-2">
+                            <div class="d-flex align-items-center justify-content-between flex-wrap">
+                                <p class="mb-sm-0 mb-2">All Laptop</p>
+                                <div class="d-flex align-items-center justify-content-between flex-wrap ">
+                                    <div class="d-flex align-items-center">
+                                        <label class="me-1" for="item">Show</label>
+                                    <select class="me-2" name="item" id="item">
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                        <option value="30">30</option>
+                                        <option value="40">40</option>
+                                        <option value="50">50</option>
+                                    </select>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <label class="me-2" for="item">Short By</label>
+                                    <select name="short" id="short">
+                                        <option value="default">Default</option>
+                                        <option value="low_price">Low Price > High Price</option>
+                                        <option value="high_price">High Price > Low Price</option>
+                                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-item-wrap">
+
+                        <div class="p-item">
+                            <div class="p-item-inner">
+                                <div class="marks">
+                                    <span class="mark">Earn Point: 150</span>
+                                </div>
+                                <div class="p-item-img"> 
+                                    <a href="#">
+                                        <img src="../assets/images/optix-g241v-e2-200x200.jpg" alt="Gaming Monitor" width="228" height="228">
+                                    </a>
+                                </div>
+                                <div class="p-item-details">
+                                <h4 class="p-item-name"> <a href="#">MSI Optix G241V E2 24" FHD FreeSync IPS Esports Gaming Monitor</a></h4>
+                                <div class="p-item-price">19,400৳</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-item">
+                            <div class="p-item-inner">
+                                <div class="marks">
+                                    <span class="mark">Earn Point: 150</span>
+                                </div>
+                                <div class="p-item-img"> 
+                                    <a href="#">
+                                        <img src="../assets/images/optix-g241v-e2-200x200.jpg" alt="Gaming Monitor" width="228" height="228">
+                                    </a>
+                                </div>
+                                <div class="p-item-details">
+                                <h4 class="p-item-name"> <a href="#">MSI Optix G241V E2 24" FHD FreeSync IPS Esports Gaming Monitor</a></h4>
+                                <div class="p-item-price">19,400৳</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-item">
+                            <div class="p-item-inner">
+                                <div class="marks">
+                                    <span class="mark">Earn Point: 150</span>
+                                </div>
+                                <div class="p-item-img"> 
+                                    <a href="#">
+                                        <img src="../assets/images/optix-g241v-e2-200x200.jpg" alt="Gaming Monitor" width="228" height="228">
+                                    </a>
+                                </div>
+                                <div class="p-item-details">
+                                <h4 class="p-item-name"> <a href="#">MSI Optix G241V E2 24" FHD FreeSync IPS Esports Gaming Monitor</a></h4>
+                                <div class="p-item-price">19,400৳</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-item">
+                            <div class="p-item-inner">
+                                <div class="marks">
+                                    <span class="mark">Earn Point: 150</span>
+                                </div>
+                                <div class="p-item-img"> 
+                                    <a href="#">
+                                        <img src="../assets/images/optix-g241v-e2-200x200.jpg" alt="Gaming Monitor" width="228" height="228">
+                                    </a>
+                                </div>
+                                <div class="p-item-details">
+                                <h4 class="p-item-name"> <a href="#">MSI Optix G241V E2 24" FHD FreeSync IPS Esports Gaming Monitor</a></h4>
+                                <div class="p-item-price">19,400৳</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-item">
+                            <div class="p-item-inner">
+                                <div class="marks">
+                                    <span class="mark">Earn Point: 150</span>
+                                </div>
+                                <div class="p-item-img"> 
+                                    <a href="#">
+                                        <img src="../assets/images/optix-g241v-e2-200x200.jpg" alt="Gaming Monitor" width="228" height="228">
+                                    </a>
+                                </div>
+                                <div class="p-item-details">
+                                <h4 class="p-item-name"> <a href="#">MSI Optix G241V E2 24" FHD FreeSync IPS Esports Gaming Monitor</a></h4>
+                                <div class="p-item-price">19,400৳</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-item">
+                            <div class="p-item-inner">
+                                <div class="marks">
+                                    <span class="mark">Earn Point: 150</span>
+                                </div>
+                                <div class="p-item-img"> 
+                                    <a href="#">
+                                        <img src="../assets/images/optix-g241v-e2-200x200.jpg" alt="Gaming Monitor" width="228" height="228">
+                                    </a>
+                                </div>
+                                <div class="p-item-details">
+                                <h4 class="p-item-name"> <a href="#">MSI Optix G241V E2 24" FHD FreeSync IPS Esports Gaming Monitor</a></h4>
+                                <div class="p-item-price">19,400৳</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+      </main>
+    </div>
+    <div class="footer_text">
+      <div class="container-fluid">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <p><em>Thank you for creating with <a href="#">Website</a></em></p>
+          <p><em>Version 1.1</a></em></p>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/select_dynamic.js"></script>
+
+  </body>
+</html>

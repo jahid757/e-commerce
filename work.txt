@@ -1,0 +1,16 @@
+Startech 
+home - 300
+category -200
+product details - 100
+account - order details -100
+
+Shopingo
+Account all(Dashboard, Orders, Profile, Address, Wishlist) - 500
+login register - 100
+
+header footer bade
+
+https://kajbaj.xyz/wp-admin/post-new.php
+table + blog -500
+pos - 400
+invoice page - 300
