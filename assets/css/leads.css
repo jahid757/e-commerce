@@ -11,6 +11,10 @@ body{
     margin-bottom: 15px;
     width:100%
 }
+.leads_profile img{
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
 .leads_profile a{
     font-size: 1.25rem;
     color: #3F4254;

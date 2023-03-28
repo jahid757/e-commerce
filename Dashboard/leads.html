@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../assets/css/dashboard.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/leads.css">
+    <link rel="stylesheet" href="../assets/css/table.css">
     <link rel="stylesheet" href="../assets/css/media.css" />
   </head>
   <body class="web_version_2">
@@ -196,15 +197,16 @@
 
               <div class="table_data rounded">
                 <div class="card border-0">
-                  <div class="card-header border-0">
-                    <div class="card-title mb-0">
+                  <div onclick="toggleCard('card_body_3')" class="card-header border-0 justify-content-between d-flex align-items-center">
+                    <div class="card-title mb-0 d-flex align-items-center">
                         <h2>Contact Details</h2>
+                        <div class="card-toolbar">
+                          <button class="table_button add"  data-bs-toggle="modal" data-bs-target="#customer">Add New</button>
+                        </div>
                     </div>
-                    <div class="card-toolbar">
-                        <button class="table_button add"  data-bs-toggle="modal" data-bs-target="#customer">Add New</button>
-                    </div>
+                    <button><span class="dropdown-toggle"></span></button>
                 </div>
-                <div class="card-body">
+                <div id="card_body_3" class="card-body">
                   <div class="">
                     <section class="row">
                         <div class="col-lg-12 table_wrap hide_scrollbar">
@@ -260,15 +262,16 @@
                                 <tfoot>
                                   <tr>
                                     <td colspan="3">19 items</td>
-                                    <td colspan="1">
+                                    <!-- <td></td> -->
+                                    <td>
                                         <nav aria-label="Page navigation example">
-                                          <ul class="pagination justify-content-end align-items-center">
-                                            <li class="page-item disabled">
+                                          <ul class="pagination justify-content-end align-items-center d-flex w-100">
+                                            <li class="page-item disabled"  style="width:auto">
                                               <button>‹</button>
                                               <button>«</button>
                                             </li>
-                                            <li class="page-item">1 of 2</li>
-                                            <li class="page-item">
+                                            <li class="page-item" style="width:auto">1 of 2</li>
+                                            <li class="page-item"  style="width:auto">
                                               <button>›</button>
                                               <button>»</button>
                                             </li>
@@ -299,7 +302,7 @@
                   <div class="">
                     <section class="row">
                         <div class="col-lg-12 table_wrap hide_scrollbar">
-                            <table class="table table-bordered table-striped">
+                            <table class="table table-bordered table-striped text-center">
                                 <thead>
                                   <tr>
                                     <!-- <th scope="col"><input type="checkbox" name="selectAll" id="selectAll"></th> -->
@@ -388,15 +391,16 @@
                                 <tfoot>
                                   <tr>
                                     <td colspan="3">19 items</td>
-                                    <td colspan="1">
+                                    <!-- <td></td> -->
+                                    <td>
                                         <nav aria-label="Page navigation example">
-                                          <ul class="pagination justify-content-end align-items-center">
-                                            <li class="page-item disabled">
+                                          <ul class="pagination justify-content-end align-items-center d-flex w-100">
+                                            <li class="page-item disabled"  style="width:auto">
                                               <button>‹</button>
                                               <button>«</button>
                                             </li>
-                                            <li class="page-item">1 of 2</li>
-                                            <li class="page-item">
+                                            <li class="page-item" style="width:auto">1 of 2</li>
+                                            <li class="page-item"  style="width:auto">
                                               <button>›</button>
                                               <button>»</button>
                                             </li>
@@ -479,15 +483,16 @@
                                 <tfoot>
                                   <tr>
                                     <td colspan="3">19 items</td>
-                                    <td colspan="1">
+                                    <!-- <td></td> -->
+                                    <td>
                                         <nav aria-label="Page navigation example">
-                                          <ul class="pagination justify-content-end align-items-center">
-                                            <li class="page-item disabled">
+                                          <ul class="pagination justify-content-end align-items-center d-flex w-100">
+                                            <li class="page-item disabled"  style="width:auto">
                                               <button>‹</button>
                                               <button>«</button>
                                             </li>
-                                            <li class="page-item">1 of 2</li>
-                                            <li class="page-item">
+                                            <li class="page-item" style="width:auto">1 of 2</li>
+                                            <li class="page-item"  style="width:auto">
                                               <button>›</button>
                                               <button>»</button>
                                             </li>
