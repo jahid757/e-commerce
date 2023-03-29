@@ -84,7 +84,7 @@ body {
 .leftSideBar ul li ul li{
     position: relative;
 }
-.leftSideBar ul li ul li::before{
+.leftSideBar ul li ul li.circle::before{
     content: '';
     width: 5px;
     height: 5px;
@@ -155,9 +155,9 @@ body {
     padding: 10px;
     border-radius: 50%;
 }
-.profile_content ul li{
+/* .profile_content ul li{
     margin-bottom: -3px;
-}
+} */
 .profile_content ul li a{
     color: rgba(240,246,252,.7);
     font-size: 14px;
