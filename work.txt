@@ -14,3 +14,5 @@ https://kajbaj.xyz/wp-admin/post-new.php
 table + blog -500
 pos - 400
 invoice page - 300
+
+/
