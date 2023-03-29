@@ -479,7 +479,9 @@ body {
   width: 3rem;
   height:1rem
 }
-
+.dropdown-toggle.active::after{
+  transform: rotate(270deg);
+}
 /* frontend */
 
 .sliding_text_wrap {
