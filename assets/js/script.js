@@ -35,7 +35,7 @@ $("#myModal").on("shown.bs.modal", function () {
 });
 
 // input validation
-function inputValidator(e, warnText, type = "text", length = 6) {
+function inputValidator(e, warnText, type = "text",eyeId, length = 6) {
   const inputValue = e;
   const warnTextContent = document.getElementById(warnText);
   if (type === "text") {
@@ -55,6 +55,13 @@ function inputValidator(e, warnText, type = "text", length = 6) {
       }
     } else {
       warnTextContent.classList.remove("active");
+    }
+    if(warnTextContent.classList.contains('active') && eyeId){
+      const eye = document.getElementById(eyeId);
+      eye.classList.add('active')
+    }else{
+      const eye = document.getElementById(eyeId);
+      eye.classList.remove('active')
     }
   }
 }
@@ -95,6 +102,13 @@ function cancelPreview(id) {
   const img = document.getElementById(id);
   img.src = "../assets/images/img_preview.png";
 }
+
+
+
+
+
+
+
 
 // remove class
 document.onclick = function (e) {

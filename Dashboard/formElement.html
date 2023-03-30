@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dashboard</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/4b5d72e539.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/prototype.css" />
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/media.css" />
+  </head>
+  <body class="web_version_2">
+    <div id="left_side" class="leftSideBar hide_scrollbar">
+      <nav>
+        <ul class="left_nav">
+            <li><a href="./index.html"><i class="fa fa-house"></i> <span>Dashboard</span></a></li>
+            <li><a href="./dataTable.html"><i class="fa fa-data"></i> <span>Data Table</span></a></li>
+            <li><a id="icon_1" onclick="toggleCard('post_sub_menu','icon_1')" class="dropdown-toggle post_toggle" href="javascript:void(0)"><i  class="fa fa-pen"> </i> <span>Post</span></a>
+              <ul id="post_sub_menu" class="toggle_sub_menu">
+                <li class="circle"><a class="active" href="./post1.html"><span>All Posts</span></a></li>
+                <li><a id="icon_2"  onclick="toggleCard('post_sec_sub_menu','icon_2')" class="dropdown-toggle post_toggle" href="javascript:void(0)"><span>Add New</span></a>
+                
+                <ul id="post_sec_sub_menu" class="toggle_sub_menu">
+                  <li class="circle"><a href="#">Submenu</a></li>
+                  <li class="circle"><a href="#">Submenu</a></li>
+                  <li class="circle"><a href="#">Submenu</a></li>
+                </ul>
+              </li>
+              </ul></li>
+            <li><a href="./profile.html"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+            <li class="collapse" onclick="toggleClass('left_side','content')"><a href="javascript:void(0)"><i class="fa fa-play"></i> <span>Collapse</span></a></li>
+        </ul>
+    </nav>
+  </div>
+  <header class="top_bar px-2">
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="toggle_left_menu">
+        <i onclick="controlLeftMenu()" class="fa fa-bars"></i>
+      </div>
+      <div class="d-flex align-items-center">
+        <a class="d-flex align-items-center" href="#">
+          <img class="img_sm" src="../assets/images/logo.png" alt="logo" />
+          <span>WB Software</span>
+        </a>
+        <div class="dropdown ms-2">
+          <a class="dropdown-toggle text-white" href="javascript:void(0)" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            New
+          </a>
+        
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Post</a></li>
+            <li><a class="dropdown-item" href="#">Media</a></li>
+            <li><a class="dropdown-item" href="#">Page</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="profile">
+        <div id="profile_pic" onclick="toggleClass('profile_content')" class="profile_pic">
+          <img class="img_sm" src="https://i.ibb.co/N61Bhkv/avater.jpg" alt="" />
+        </div>
+        <div id="profile_content" class="profile_content">
+          <div class="w-140">
+            <div class="d-flex align-items-center border-bottom border-secondary">
+              <img src="https://i.ibb.co/N61Bhkv/avater.jpg" alt="">
+            <ul>
+              <li><a href="#">Jahid</a></li>
+              <li><span class="slogan">Web Developer</span></li>
+            </ul>
+            </div>
+            <ul class="pofile_link">
+              <li><a href="#">Edit Profile</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+    <div class="content">
+      <main>
+        <div class="container">
+
+          <div class="row">
+
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-haeder text-center py-2 pt-3">
+                  <h4 class="h5 mb-0">Password Change Form</h4>
+                </div>
+                <div class="card-body">
+                  <form class="passShowForm">
+                    <div class="form-floating mb-3">
+                          <input  class="form-control rounded-0" onblur="inputValidator(this.value,'oldPasswordWarn','password','eye_1')" placeholder="Old Password" type="password" name="name" id="oldPassword"><label for="oldPassword">Old Password</label>
+                      <i id="eye_1" onclick="showPass('oldPassword')" class="fa fa-eye"></i>
+                      <span id="oldPasswordWarn" class="text-danger warn">Old Password is required</span>
+                    </div>
+                    <div class="form-floating mb-3">
+                          <input  class="form-control rounded-0" onblur="inputValidator(this.value,'newPasswordWarn','password','eye_2')" placeholder="New Password" type="password" name="name" id="newPassword"><label for="newPassword">New Password</label>
+                      <i id="eye_2" onclick="showPass('newPassword')" class="fa fa-eye"></i>
+                      <span id="newPasswordWarn" class="text-danger warn">New Password is required</span>
+                    </div>
+                    <div class="form-floating mb-3">
+                          <input  class="form-control rounded-0" onblur="inputValidator(this.value,'confirmPasswordWarn','password','eye_3')" placeholder="Confirm Password" type="password" name="name" id="confirmPassword"><label for="confirmPconfirmassword">Confirm Password</label>
+                      <i id="eye_3" onclick="showPass('confirmPassword')" class="fa fa-eye"></i>
+                      <span id="confirmPasswordWarn" class="text-danger warn">Confirm Password is required</span>
+                    </div>
+                    <div class="d-grid gap-3 w-100">
+                      <button type="button" class="btn bg-dark btn-dark py-3 btn-ecomm">Change</button>
+                      <button type="button" class="btn border border-dark btn-outline-dark py-3 btn-ecomm" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div> <!-- row end -->
+          
+        </div> <!-- container end -->
+      </main>
+    </div>
+    <div class="footer_text">
+      <div class="container-fluid">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <p><em>Thank you for creating with <a href="#">Website</a></em></p>
+          <p><em>Version 1.1</a></em></p>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/select_dynamic.js"></script>
+    <script src="../assets/js/select.js"></script>
+  </body>
+</html>

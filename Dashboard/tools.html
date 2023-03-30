@@ -139,24 +139,26 @@
 
                 <div class="col-md-4 mb-3">
                   <div class="card p-2">
-                    <div class="single_input">
-                      <input onblur="inputValidator(this.value,'warnTextName','text')" placeholder="Name" class="form-control" type="text" name="name" id="name">
-                      <span id="warnTextName" class="text-danger warn">Name is required</span>
-                    </div>
-
-                    <div class="single_input">
-                      <input onblur="inputValidator(this.value,'warnTextPassword','password' , 6)" placeholder="Password" class="form-control" type="password" name="password" id="password">
-                      <span id="warnTextPassword" class="text-danger warn">Password is required</span>
-                    </div>
-
-                    <div class="single_input">
-                      <div class="passShow">
-                        <input onblur="inputValidator(this.value,'warnTextPasswordConfirm','password' , 6)" placeholder="Confirm Password" class="form-control" type="password" name="cPassword" id="cPassword">
-                        <i onclick="showPass('cPassword')" class="fa fa-eye"></i>
+                    <form class="passShowForm" action="">
+                      <div class="single_input">
+                        <input onblur="inputValidator(this.value,'warnTextName','text')" placeholder="Name" class="form-control" type="text" name="name" id="name">
+                        <span id="warnTextName" class="text-danger warn">Name is required</span>
                       </div>
-                      <span id="warnTextPasswordConfirm" class="text-danger warn">Password is required</span>
-                    </div>
-
+  
+                      <div class="single_input">
+                        <input onblur="inputValidator(this.value,'warnTextPassword','password' , 6)" placeholder="Password" class="form-control" type="password" name="password" id="password">
+                        <span id="warnTextPassword" class="text-danger warn">Password is required</span>
+                      </div>
+  
+                      <div class="single_input">
+                        <div class="passShow">
+                          <input onblur="inputValidator(this.value,'warnTextPasswordConfirm','password' , 6)" placeholder="Confirm Password" class="form-control" type="password" name="cPassword" id="cPassword">
+                          <i onclick="showPass('cPassword')" class="fa fa-eye"></i>
+                        </div>
+                        <span id="warnTextPasswordConfirm" class="text-danger warn">Password is required</span>
+                      </div>
+  
+                    </form>
                   </div>
                 </div>
 

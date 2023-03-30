@@ -21,15 +21,20 @@ function openSelectMenu(wrapper, option, input, buttonId, data,zIndex) {
   // zIndexElement.style.zIndex = `${10*zIndexPoint}`
   wrapperElement.classList.toggle("active");
   options.innerHTML = "";
-  dataLists[`${data}`].forEach((item) => {
-    let li = `<li onclick="updateRoleName(this)">${item}</li>`;
+  dataLists[`${data}`].forEach((item, index) => {
+    let li = `<li id="classUpdate_${index}" onclick="updateRoleName(this,'classUpdate_${index}')">${item}</li>`;
     options.insertAdjacentHTML("beforeend", li);
   });
 }
 
-function updateRoleName(selectedLi) {
+function updateRoleName(selectedLi,id) {
   const { wrapper, option, input, btn, data,zIndex } = saveData;
   const search = document.getElementById(input);
+  // if(id){
+  //   const element = document.getElementById(id)
+  //   element.style.background = 'red'
+  //   console.log(element)
+  // }
   search.value = "";
 
   openSelectMenu(wrapper, option, input, btn, data, zIndex);
