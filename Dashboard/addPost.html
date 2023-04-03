@@ -9,6 +9,7 @@
       src="https://kit.fontawesome.com/4b5d72e539.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../assets/css/prototype.css" />
@@ -94,11 +95,12 @@
           
 
           <div class="row">
-            <div class="col-md-8 mb-3">
+            <div class="col-md-9 mb-3">
 
               <form action="" class="mb-3">
                 <div class="text_input">
                   <div class="form-group mb-2">
+                    <label class="h5" for="description">Title</label>
                   <input type="text" class="form-control" placeholder="Add title" name="title" id="title">
                   </div>
 
@@ -113,7 +115,7 @@
                 <div onclick="toggleCard('card_body_1')" class="card-header">
                   <div class="d-flex align-items-center justify-content-between">
                     <h5 class="dash-title">Project</h5>
-                    <button><span class="dropdown-toggle"></span></button>
+                    <button class="border-0"><span class="dropdown-toggle"></span></button>
                   </div>
                 </div>
                 <div id="card_body_1" class="card-body">
@@ -122,13 +124,77 @@
               </div>
 
             </div>  <!-- col-md-8 end-->
-            <div class="col-md-4 mb-3">
+            <div class="col-md-3 mb-3">
+
+              <div class="card">
+                <div onclick="toggleCard('card_body_-x')" class="card-header">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <h5 class="dash-title">Publish</h5>
+                    <button class="border-0"><span class="dropdown-toggle"></span></button>
+                  </div>
+                </div>
+                <div id="card_body_x" class="card-body">
+                    <div class="d-flex mt-1 justify-content-between mt-2">
+                      <button class="table_button add btn p-2">Save Draft</button>
+                      <button class="table_button add btn p-2">Preview</button>
+                    </div>
+                    <div class="my-2">
+                      <p class="fs-7"><i class="fa-solid fa-key"></i> Status: <strong>Draft</strong> <a onclick="slideToggleControl('edit_content')" href="javascript:void(0)">Edit</a></p>
+                      <div id="edit_content" class="d-none-content">
+                        <div class="d-flex gap-1 align-items-center">
+                          <select name="edit" id="edit">
+                            <option value="pending">Pending Review</option>
+                            <option value="draft">Draft</option>
+                          </select>
+                          <button class="table_button add btn">Ok</button>
+                          <a onclick="slideToggleControl('edit_content')" href="#">Cancel</a>
+                        </div>
+                      </div>
+                      <p class="fs-7"><i class="fa-solid fa-eye"></i> Visibility: <strong>Public</strong> <a onclick="slideToggleControl('vis_content')" href="javascript:void(0)">Edit</a></p>
+
+                      <div id="vis_content" class="d-none-content">
+                        <div class="radio_option">
+                              <label class="option_input">
+                                <input type="radio" name="screen_columns" value="public">
+                               Public	
+                              </label>
+                            <label class="option_input">
+                              <input type="radio" name="screen_columns" value="pass">
+                              Password protected	
+                            </label>
+                            <label class="option_input">
+                              <input type="radio" name="screen_columns" value="private">
+                              Private	
+                            </label>
+                        </div>
+                        <div class="d-flex gap-1 align-items-center">
+                          <button class="table_button add btn">Ok</button>
+                          <a onclick="slideToggleControl('vis_content')" href="#">Cancel</a>
+                        </div>
+                      </div>
+
+                      <p class="fs-7"><i class="fa-solid fa-calendar-days"></i> Publish : <strong>immediately </strong> <a onclick="slideToggleControl('publish')" href="#">Edit</a></p>
+
+                      <div id="publish" class="d-none-content">
+                        <div class="d-flex gap-2">
+                          <input type="date" placeholder="YYYY-MM-DD" name="date" id="date" class="form-control">
+                          <input type="time" placeholder="01:12 PM" class="form-control">
+                        </div>
+                        <div class="d-flex gap-1 align-items-center">
+                          <button class="table_button add btn">Ok</button>
+                          <a onclick="slideToggleControl('publish')" href="#">Cancel</a>
+                        </div>
+                      </div>
+
+                    </div>
+                </div>
+              </div> 
 
               <div class="card">
                 <div onclick="toggleCard('card_body_2')" class="card-header">
                   <div class="d-flex align-items-center justify-content-between">
                     <h5 class="dash-title">WB Soft ইউনিকোড কনভার্টার </h5>
-                    <button><span class="dropdown-toggle"></span></button>
+                    <button class="border-0"><span class="dropdown-toggle"></span></button>
                   </div>
                 </div>
 
@@ -152,6 +218,8 @@
                         </div>
                     </div>
                     </div>
+
+                    
 
                     <!-- <div class="card-body"> -->
                       <div class="filter_options">
@@ -223,7 +291,7 @@
                 <div onclick="toggleCard('card_body_3')" class="card-header">
                   <div class="d-flex align-items-center justify-content-between">
                     <h5 class="dash-title">Categories</h5>
-                    <button><span class="dropdown-toggle"></span></button>
+                    <button class="border-0"><span class="dropdown-toggle"></span></button>
                   </div>
                 </div>
                 <div id="card_body_3" class="card-body">
@@ -247,7 +315,7 @@
                 <div onclick="toggleCard('card_body_4')" class="card-header">
                   <div class="d-flex align-items-center justify-content-between">
                     <h5 class="dash-title">Tags</h5>
-                    <button><span class="dropdown-toggle"></span></button>
+                    <button class="border-0"><span class="dropdown-toggle"></span></button>
                   </div>
                 </div>
                 <div id="card_body_4" class="card-body">
@@ -271,13 +339,15 @@
                 <div onclick="toggleCard('card_body_5')" class="card-header">
                   <div class="d-flex align-items-center justify-content-between">
                     <h5 class="dash-title">Featured image</h5>
-                    <button><span class="dropdown-toggle"></span></button>
+                    <button class="border-0"><span class="dropdown-toggle"></span></button>
                   </div>
                 </div>
                 <div id="card_body_5" class="card-body my-2 mb-3 position-relative">
-                    <a class="text-decoration-underline" href="#">set featured image</a>
-                    <input type="file" name="featuredImg" id="featuredImg" onchange="PreviewImage('featuredImg','featuredImgPreview')">
-                    <img class="w-100" id="featuredImgPreview" src="" alt="">
+                  <div style="width:100%; height:300px" class="select_imgWith_preview">
+                    <img id="uploadPreview" src="../assets/images/img_preview.png"/>
+                    <input id="uploadImage" type="file" name="myPhoto" onchange="PreviewImage('uploadImage','uploadPreview');" />
+                    <i onclick="cancelPreview('uploadPreview')" class="fa-sharp fa-solid fa-xmark cross_mark"></i>
+                  </div>
                 </div>
               </div> 
 
@@ -306,6 +376,17 @@
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/script.js"></script>
     <script src="../assets/js/select_dynamic.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      flatpickr("input[type=date]", {
+        dateFormat: "Y-m-d",
+      });
+      flatpickr("input[type=time]", {
+        enableTime: true,
+    noCalendar: true,
+    dateFormat: "H:i K",
+      });
+    </script>
     <script>
       // tag add remove and render
       let tags = ['trending','latest','djks']
