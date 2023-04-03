@@ -51,7 +51,7 @@
           <img class="img_sm" src="../assets/images/logo.png" alt="logo" />
           <span>WB Software</span>
         </a>
-        <div class="dropdown ms-2">
+        <div class="dropdown ms-2 ms-lg-5 ps-lg-5">
           <a class="dropdown-toggle text-white" href="javascript:void(0)" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
             New
           </a>
@@ -89,8 +89,52 @@
       <main>
         <section>
           <div class="container-fluid mt-3">
+
+            <div class="screen_option ">
+              <div id="screen_option_view" class="w-100 card-body p-2 px-3 card ">
+                <p class="mb-2">Screen elements</p>
+
+                <div class="d-flex gap-2 mb-2">
+                  <label class="option_input" for="check1">
+                    <input type="checkbox" name="check1" id="check1"> Checkbox
+                  </label>
+
+                  <label class="option_input" for="check2">
+                    <input type="checkbox" name="check2" id="check2"> Checkbox
+                  </label>
+
+                  <label class="option_input" for="check3">
+                    <input type="checkbox" name="check3" id="check3"> Checkbox
+                  </label>
+
+                  <label class="option_input" for="check4">
+                    <input type="checkbox" name="check4" id="check4"> Checkbox
+                  </label>
+
+                  <label class="option_input" for="check5">
+                    <input type="checkbox" name="check5" id="check5"> Checkbox
+                  </label>
+
+                </div>
+                <p class="mb-2">Layout</p>
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <label class="option_input">
+                    <input type="radio" name="screen_columns" value="1">
+                    1 column			</label>
+                    <label class="option_input">
+                      <input type="radio" name="screen_columns" value="2">
+                      2 columns			</label>
+                </div>
+                <p class="mb-2">Additional Settings</p>
+                <label class="option_input" for="editor-expand-toggle"><input type="checkbox" id="editor-expand-toggle" checked="checked">Enable full-height editor and distraction-free functionality.</label>
+              </div>
+              <div class="d-flex justify-content-end option_btn_wrap">
+                <button onclick="slideToggleControl('screen_option_view')" class="btn border border-dark option_btn">Screen Option</button>
+              </div>
+            </div>
+
             <div class="top_post d-flex align-items-center justify-content-between mb-3">
-              <h3>Tools</h3>
+              <div class="d-flex align-items-center"><h3>Tools<span class="divider"> |</span></h3><span class="nav_indicator"><a href="./index.html">Home</a> > Tools</span></div>
             </div>
             <div class="card_wrap">
               <div class="row">

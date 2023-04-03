@@ -103,7 +103,11 @@ function cancelPreview(id) {
   img.src = "../assets/images/img_preview.png";
 }
 
-
+function slideToggleControl(id){
+  $(document).ready(function () {
+    $(`#${id}`).slideToggle()
+  })
+}
 
 
 
