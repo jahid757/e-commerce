@@ -451,7 +451,9 @@ i.fa-eye{
   #filter_content.active{
     display: block;
   }
-
+.toggle_sub_menu{
+  display: none;
+}
   .select_imgWith_preview{
     position: relative;
     width: 100px;
