@@ -87,7 +87,7 @@
     </div>
   </header>
     <div class="content">
-      <main>
+      <form>
         <div class="container-fluid">
           <div class="top_post d-flex align-items-center justify-content-between mb-3">
             <div class="d-flex align-items-center"><h3>Add New Post<span class="divider"> |</span></h3><span class="nav_indicator"><a href="./index.html">Home</a> > Add New Post</span></div>
@@ -95,21 +95,23 @@
           
 
           <div class="row">
-            <div class="col-md-9 mb-3">
+            <div class="col-md-10 mb-3">
 
-              <form action="" class="mb-3">
-                <div class="text_input">
+              <!-- <form action="" class="mb-3"> -->
+                <div class="text_input mb-3">
                   <div class="form-group mb-2">
                     <label class="h5" for="description">Title</label>
-                  <input type="text" class="form-control" placeholder="Add title" name="title" id="title">
+                  <input onblur="inputValidator(this.value,'warnTextName','text')" required type="text" class="form-control" placeholder="Add title" name="title" id="title">
+                  <span id="warnTextName" class="text-danger warn">Title is required</span>
                   </div>
 
                   <div class="form-group">
                     <label class="h5" for="description">Add new post</label>
-                  <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
+                  <textarea required name="description" class="form-control"  id="description" cols="30" rows="10"></textarea>
+                  <span id="warnTextDesc" class="text-danger warn">Description is required</span>
                   </div>
                 </div>
-              </form>
+              <!-- </form> -->
 
               <div class="card ">
                 <div onclick="toggleCard('card_body_1')" class="card-header">
@@ -124,7 +126,7 @@
               </div>
 
             </div>  <!-- col-md-8 end-->
-            <div class="col-md-3 mb-3">
+            <div class="col-md-2 mb-3">
 
               <div class="card">
                 <div onclick="toggleCard('card_body_-x')" class="card-header">
@@ -184,6 +186,10 @@
                           <button class="table_button add btn">Ok</button>
                           <a onclick="slideToggleControl('publish')" href="#">Cancel</a>
                         </div>
+                      </div>
+
+                      <div style="background-color: rgb(0 0 0 / 3%);" class="card-footer px-0">
+                        <button onclick="return validate();" type="submit" class="table_button add btn">Submit</button>
                       </div>
 
                     </div>
@@ -377,6 +383,7 @@
     <script src="../assets/js/script.js"></script>
     <script src="../assets/js/select_dynamic.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="../assets/js/tinymce.min.js"></script>
     <script>
       flatpickr("input[type=date]", {
         dateFormat: "Y-m-d",
@@ -409,6 +416,56 @@
         })
       }
       renderTag()
+    </script>
+
+    <script>
+      var editor_config = {
+            path_absolute : "/",
+            selector: "#description",
+            plugins: [
+                "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+                "searchreplace wordcount visualblocks visualchars code fullscreen",
+                "insertdatetime media nonbreaking save table contextmenu directionality",
+                "emoticons template paste textcolor colorpicker textpattern"
+            ],
+            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media",
+            relative_urls: false,
+            file_browser_callback : function(field_name, url, type, win) {
+                var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+
+                var cmsURL = editor_config.path_absolute + 'laravel-filemanager?field_name=' + field_name;
+                if (type == 'image') {
+                    cmsURL = cmsURL + "&type=Images";
+                } else {
+                    cmsURL = cmsURL + "&type=Files";
+                }
+
+                tinyMCE.activeEditor.windowManager.open({
+                    file : cmsURL,
+                    title : 'Filemanager',
+                    width : x * 0.8,
+                    height : y * 0.8,
+                    resizable : "yes",
+                    close_previous : "no"
+                });
+            }
+        };
+
+        tinymce.init(editor_config);
+        // var editorContent = tinymce.get('description').getContent();
+        // if (editorContent == '')
+        // {
+        //     console.log('null data')
+        // }
+    </script>
+    <script>
+      function validate() {
+        if ((tinymce.EditorManager.get('description').getContent()) == '') {
+            document.getElementById('warnTextDesc').classList.add('active')
+            return false;
+        }
+      }
     </script>
   </body>
 </html>
