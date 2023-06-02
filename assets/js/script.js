@@ -14,7 +14,16 @@ function controlLeftMenu() {
   const leftMenu = document.getElementById("left_side");
   leftMenu.classList.toggle("open");
 }
-
+// toggle mouse hover
+function mouseOver(id){
+  const element = document.getElementById(id);
+  if(element.classList.contains('active')){
+    
+  element.classList.remove("active");
+  }else{
+    element.classList.add("active");
+  }
+}
 // toggle dashboard card
 function toggleCard(id, iconId) {
   $(document).ready(function () {
